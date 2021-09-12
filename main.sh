@@ -71,14 +71,14 @@ ______ _____ _   _ _____  ___ ____________ _     _____
     Ubuntu)
       chmod +x lol.sh 
       echo "Ubuntu script is starting..."
-      sh lol.sh
+      cat Ubuntu/ubuntu.sh
       echo ""
       break
       ;;
     Manjaro)
       chmod +x lol.sh 
       echo "Manjaro script is starting..."
-      sh lol.sh
+      cat Manjaro/manjaro.sh
       echo ""
       break
       ;;
