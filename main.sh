@@ -93,7 +93,7 @@ sudo eopkg it i3 i3blocks i3status i3-devel i3lock polybar kitty krita xkill fis
      #noisetorch
      if [ -d "$HOME/.local/bin" ] ; then
          PATH="$HOME/.local/bin:$PATH"
-     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && reboot 
+     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && echo "DONE!" && reboot 
       echo ""
       break
       ;;
