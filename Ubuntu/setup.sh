@@ -1,0 +1,1 @@
+sudo cp coins.otf ~/.fonts/coins.otf && 

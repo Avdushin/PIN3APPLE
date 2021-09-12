@@ -1,0 +1,6 @@
+#Kitty terminal config
+# .config/kitty/kitty.conf
+
+#config solarized
+background #002B36
+font_size 13
