@@ -24,8 +24,6 @@
 #################                                   GENERAL SETINGS                                 #################
 #####################################################################################################################
 
-# file manager
-
 # раскладка клавиатуры
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant -option grp:alt_shift_toggle 
 
@@ -60,7 +58,10 @@ bindsym $mod+g exec gcolor3;floating enable
 # file manager 
 bindsym $mod+e exec thunar
 #bindsym $mod+e exec dolphin
+
 #bindsym $mod+e exec dolphin
+
+#bindsym $mod+e exec nautilus
 
 # noisetorch
 bindsym $mod+n exec ~/.local/bin/noisetorch 
