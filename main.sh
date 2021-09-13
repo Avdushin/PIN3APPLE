@@ -5,10 +5,10 @@ NORMAL=$'\033[0m'
 
 clear
 sh welcome.sh
-echo "Author - https://github.com/Avdushin"
+echo -e "\e[0;92mAuthor - https://github.com/Avdushin"
 echo ""
-echo "Choose your distro..."
-echo " "
+echo -e "\e[0;1;33mChoose your distro..." 
+echo -e "\033[0m "
 
 
 # sudo cp -r polybar/ ~/.config/ && sudo cp -r /walls/ ~/ && sudo tar -xf sublime_text_build_4113_x64.tar.xz  -C ~/.appz 
@@ -53,17 +53,18 @@ ______ _____ _   _ _____  ___ ____________ _     _____
     # Distros
 
     Ubuntu)
-      echo ""
+      echo -e "\033[0;32m" 
       echo "Ubuntu script is starting..."
+      echo -e "\033[0m "
       cat Ubuntu/ubuntu.sh
       sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
       echo ""
       break
       ;;
-    Manjaro)
-      echo ""
+   Manjaro)
+      echo -e "\033[0;32m" 
       echo "Manjaro script is starting..."
-      echo ""
+      echo -e "\033[0m "
       sh Manjaro/manjaro.sh
       sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
       echo ""
@@ -71,8 +72,9 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       break
       ;;
     Fedora)
-      echo ""
+      echo -e "\033[0;32m" 
       echo "Fedora script is starting..."
+      echo -e "\033[0m "
       echo ""
       sh Fedora/fedora.sh
       sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
@@ -80,8 +82,9 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       break
       ;;
     Solus)
-      echo ""
+      echo -e "\033[0;32m" 
       echo "solus script is starting..."
+      echo -e "\033[0m "
       echo ""
       sh Solus/solus.sh
       echo ""
@@ -96,7 +99,8 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       break
       ;;
     *) 
-      echo "Invalid option $REPLY"
+      echo -e "\e[0;91mInvalid option $REPLY"
+      echo -e "\033[0m "
       ;;
   esac
 done
