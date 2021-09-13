@@ -20,8 +20,70 @@
 # Print = PRINT key
 # Tab = TAB key
 
+#####################################################################################################################
+#################                                   GENERAL SETINGS                                 #################
+#####################################################################################################################
+
+# file manager
+
 # раскладка клавиатуры
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant -option grp:alt_shift_toggle 
+
+# feh обои рабочего стола
+exec --no-startup-id feh --bg-fill ~/walls/manjaro.png &
+
+#xkill
+bindsym --release $mod+Escape exec xkill
+
+
+#####################################################################################################################
+#################                          Запуск программ - сочитания клавиш                       #################
+#####################################################################################################################
+
+
+# Старт программ
+
+# sublime_text
+bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text 
+#bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
+#bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
+
+# blanket
+bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket 
+
+# chromium
+bindsym $mod+alt+c exec flatpak run org.chromium.Chromium
+
+# gcolor
+bindsym $mod+g exec gcolor3;floating enable
+
+# nautilus
+bindsym $mod+e exec nautilus
+
+# noisetorch
+bindsym $mod+n exec ~/.local/bin/noisetorch 
+
+# discord
+bindsym $mod+shift+d exec discord 
+
+# freetube
+#bindsym $mod+y exec freetube 
+
+# gitkraken
+bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
+
+# terminal
+bindsym $mod+Return exec kitty;focus
+
+# telegram 
+bindsym $mod+t exec --no-startup-id telegram-desktop
+
+#System monitor
+bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
+
+#catfish
+bindsym control+mod1+c exec --no-startup-id catfish;focus
+
 
 
 #####################################################################################################################
@@ -172,8 +234,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
-
-
 #####################################################################################################################
 #################                          Moving around in i3                                      #################
 #####################################################################################################################
@@ -208,8 +268,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-
 
 
 #####################################################################################################################
@@ -318,10 +376,6 @@ bindsym $mod+r mode "resize"
 # choose your font
 font pango:Noto Mono Regular 13
 
-
-
-
-
 #####################################################################################################################
 #################                          assign applications to workspaces                       #################
 #####################################################################################################################
@@ -414,9 +468,6 @@ exec_always --no-startup-id numlockx on
 # clipman
 #exec --no-startup-id xfce4-clipman
 
-# feh обои рабочего стола
-exec --no-startup-id feh --bg-fill ~/walls/solus.png &
-
 # Polybar панель
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -429,61 +480,6 @@ exec --no-startup-id xfce4-power-manager &
 # IF xfsettingsd is activated you can not change themes
 #exec --no-startup-id xfsettingsd &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-
-#####################################################################################################################
-#################                          Запуск программ - сочитания клавиш                       #################
-#####################################################################################################################
-
-
-# Старт программ
-
-# sublime_text
-bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text 
-#bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
-#bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
-
-# blanket
-bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket 
-
-# chromium
-bindsym $mod+alt+c exec flatpak run org.chromium.Chromium
-
-# gcolor
-bindsym $mod+g exec gcolor3;floating enable
-
-# nautilus
-bindsym $mod+e exec nautilus
-
-# noisetorch
-bindsym $mod+n exec ~/.local/bin/noisetorch 
-
-# discord
-bindsym $mod+shift+d exec discord 
-
-# freetube
-#bindsym $mod+y exec freetube 
-
-# gitkraken
-bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
-
-# terminal
-bindsym $mod+Return exec kitty;focus
-
-# telegram 
-bindsym $mod+t exec --no-startup-id telegram-desktop
-
-# teams
-bindsym $mod+shift+t exec flatpak run com.github.IsmaelMartinez.teams_for_linux
-
-
-#System monitor
-bindsym control+Shift+Escape exec --no-startup-id gnome-system-monitor;focus
-
-#catfish
-bindsym control+mod1+c exec --no-startup-id catfish;focus
-
-#xkill
-bindsym --release $mod+Escape exec xkill
 
 #workspace related
 
@@ -592,10 +588,6 @@ for_window [window_role="^Preferences$"] floating enable
 for_window [window_role="setup"] floating enable
 
 
-
-
-
-
 #####################################################################################################################
 #################                          give focus to applications                               #################
 #####################################################################################################################
@@ -632,17 +624,6 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
-
-
-#####################################################################################################################
-#################                          bar toggle                                               #################
-#####################################################################################################################
-
-
-# bar toggle, hide or show
-#bindsym $mod+b bar mode toggle
-
-
 #####################################################################################################################
 #################                         Контроль обводки                                          #################
 #####################################################################################################################
@@ -677,9 +658,6 @@ new_float normal
 #Popups during fullscreen mode
 popup_during_fullscreen smart
 
-
-
-
 #####################################################################################################################
 #################                          i3 gaps next                                             #################
 #####################################################################################################################
@@ -695,10 +673,6 @@ gaps inner 5
 gaps outer 5
 #smart_gaps on
 #smart_borders on
-
-
-
-
 
 #####################################################################################################################
 #################                          i3 gaps change                                           #################

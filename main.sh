@@ -57,6 +57,7 @@ ______ _____ _   _ _____  ___ ____________ _     _____
                                                        
 
  "
+
           echo "This program created to easy setup ANANAZZ I3 config"
           echo "Author - https://github.com/Avdushin"
           echo ""
