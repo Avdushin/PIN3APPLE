@@ -57,8 +57,10 @@ bindsym $mod+alt+c exec flatpak run org.chromium.Chromium
 # gcolor
 bindsym $mod+g exec gcolor3;floating enable
 
-# nautilus
-bindsym $mod+e exec nautilus
+# file manager 
+bindsym $mod+e exec thunar
+#bindsym $mod+e exec dolphin
+#bindsym $mod+e exec dolphin
 
 # noisetorch
 bindsym $mod+n exec ~/.local/bin/noisetorch 
@@ -468,12 +470,9 @@ exec_always --no-startup-id numlockx on
 # clipman
 #exec --no-startup-id xfce4-clipman
 
-<<<<<<< HEAD
-=======
 # feh обои рабочего стола
 exec --no-startup-id feh --bg-fill ~/walls/manjaro.png &
 
->>>>>>> 21b5e4e2fcb6ed92064cafee8ec4b68310c03065
 # Polybar панель
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
