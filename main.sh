@@ -31,7 +31,7 @@ echo " "
 
 # sudo cp -r polybar/ ~/.config/ && sudo cp -r /walls/ ~/ && sudo tar -xf sublime_text_build_4113_x64.tar.xz  -C ~/.appz 
 
-select opt in Distro_info Ubuntu Manjaro Solus Neofetch About quit ; do
+select opt in Distro_info Ubuntu Manjaro Fedora Solus Neofetch About quit ; do
 
     PS3="Select the operation: "
 
@@ -70,21 +70,31 @@ ______ _____ _   _ _____  ___ ____________ _     _____
     # Distros
 
     Ubuntu)
-      chmod +x lol.sh 
+      echo ""
       echo "Ubuntu script is starting..."
       cat Ubuntu/ubuntu.sh
       echo ""
       break
       ;;
     Manjaro)
-      chmod +x lol.sh 
+      echo ""
       echo "Manjaro script is starting..."
+      echo ""
       sh Manjaro/manjaro.sh
+      echo ""
+      exit
+      break
+      ;;
+    Fedora)
+      echo ""
+      echo "Fedora script is starting..."
+      echo ""
+      sh Fedora/fedora.sh
       echo ""
       break
       ;;
     Solus)
-      chmod +x lol.sh 
+      echo ""
       echo "solus script is starting..."
       echo ""
       #!/bin/bash
