@@ -100,7 +100,7 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       echo ""
       echo "solus script is starting..."
       echo ""
-      sh solus.sh
+      sh Solus/solus.sh
       echo ""
       break
       ;;
