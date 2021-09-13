@@ -78,7 +78,7 @@ ______ _____ _   _ _____  ___ ____________ _     _____
     Manjaro)
       chmod +x lol.sh 
       echo "Manjaro script is starting..."
-      cat Manjaro/manjaro.sh
+      sh Manjaro/manjaro.sh
       echo ""
       break
       ;;
