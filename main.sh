@@ -4,25 +4,7 @@ GREEN=$'\033[0;32m'
 NORMAL=$'\033[0m'
 
 clear
-echo " 
- _    _ _____ _     _____ ________  ________   _____ _____ 
-| |  | |  ___| |   /  __ |  _  |  \/  |  ___| |_   _|  _  |
-| |  | | |__ | |   | /  \| | | | .  . | |__     | | | | | |
-| |/\| |  __|| |   | |   | | | | |\/| |  __|    | | | | | |
-\  /\  | |___| |___| \__/\ \_/ | |  | | |___    | | \ \_/ /
- \/  \/\____/\_____/\____/\___/\_|  |_\____/    \_/  \___/ 
-                                                           
-                                                           
-______ _____ _   _ _____  ___ ____________ _     _____ 
-| ___ |_   _| \ | |____ |/ _ \| ___ | ___ | |   |  ___|
-| |_/ / | | |  \| |   / / /_\ | |_/ | |_/ | |   | |__  
-|  __/  | | | .   |   \ |  _  |  __/|  __/| |   |  __| 
-| |    _| |_| |\  .___/ | | | | |   | |   | |___| |___ 
-\_|    \___/\_| \_\____/\_| |_\_|   \_|   \_____\____/ 
-                                                       
-                                                       
- "
-
+sh welcome.sh
 echo "Author - https://github.com/Avdushin"
 echo ""
 echo "Choose your distro..."
@@ -46,7 +28,7 @@ select opt in Distro_info Ubuntu Manjaro Fedora Solus Neofetch About quit ; do
           ;;
         About) 
           clear
-          echo " 
+          echo -e " \e[0;1;33m
                                                            
 ______ _____ _   _ _____  ___ ____________ _     _____ 
 | ___ |_   _| \ | |____ |/ _ \| ___ | ___ | |   |  ___|
@@ -55,14 +37,15 @@ ______ _____ _   _ _____  ___ ____________ _     _____
 | |    _| |_| |\  .___/ | | | | |   | |   | |___| |___ 
 \_|    \___/\_| \_\____/\_| |_\_|   \_|   \_____\____/ 
                                                        
-
+\033[0m  
  "
 
           echo "This program created to easy setup ANANAZZ I3 config"
-          echo "Author - https://github.com/Avdushin"
           echo ""
-          echo "VERSION 0.0"
-          echo ""
+          echo -e "\e[0;92mAuthor - https://github.com/Avdushin"
+          echo -e " "
+          echo -e "\e[0;91mVERSION 0.0"
+          echo -e "\033[0m "
           echo  "Put""$GREEN ENTER""$NORMAL to show operation list"
           echo ""
           ;;
