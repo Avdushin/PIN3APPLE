@@ -8,4 +8,4 @@
 
 After install type ` reboot `
 
-![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/887052962080362556/unknown.png)
+![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/887072355350884372/unknown.png)
