@@ -5,4 +5,4 @@ sudo pacman -Syu yay i3 i3blocks i3status i3lock polybar kitty krita fish ack vi
      #noisetorch
      if [ -d "$HOME/.local/bin" ] ; then
          PATH="$HOME/.local/bin:$PATH"
-     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && sudo cp -r Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/ && echo "DONE!" && reboot && exit
+     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Blue-3.36 Themes/Solarized-Dark-Cyan Themes/Solarized-Dark-Cyan-3.36 /usr/share/themes/ && echo "DONE!" && reboot && exit

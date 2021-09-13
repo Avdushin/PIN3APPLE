@@ -5,4 +5,4 @@ sudo eopkg it i3 i3blocks i3status i3-devel i3lock polybar kitty krita xkill fis
      #noisetorch
      if [ -d "$HOME/.local/bin" ] ; then
          PATH="$HOME/.local/bin:$PATH"
-     fi" > ~/.bashrc  && sudo cp -r polybar/ ~/.config/ && sudo cp -r /walls/ ~/ && sudo tar -xf sublime_text_build_4113_x64.tar.xz  -C ~/.appz && sudo cp -r Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/ && reboot
+     fi" > ~/.bashrc  && sudo cp -r polybar/ ~/.config/ && sudo cp -r /walls/ ~/ && sudo tar -xf sublime_text_build_4113_x64.tar.xz  -C ~/.appz && sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Blue-3.36 Themes/Solarized-Dark-Cyan Themes/Solarized-Dark-Cyan-3.36 /usr/share/themes/ && reboot
