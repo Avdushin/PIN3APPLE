@@ -107,8 +107,7 @@ sudo eopkg it i3 i3blocks i3status i3-devel i3lock polybar kitty krita xkill fis
      #noisetorch
      if [ -d "$HOME/.local/bin" ] ; then
          PATH="$HOME/.local/bin:$PATH"
-     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && echo "DONE!" && reboot && exit
-     sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
+     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/ && echo "DONE!" && reboot && exit
       echo ""
       break
       ;;
