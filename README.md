@@ -6,5 +6,6 @@
  
 ` ./main.sh ` 
 
+After install type ` reboot `
 
 ![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/887051257452331098/unknown.png)
