@@ -10,9 +10,6 @@ echo ""
 echo -e "\e[0;1;33mChoose your distro..." 
 echo -e "\033[0m "
 
-
-# sudo cp -r polybar/ ~/.config/ && sudo cp -r /walls/ ~/ && sudo tar -xf sublime_text_build_4113_x64.tar.xz  -C ~/.appz 
-
 select opt in Distro_info Ubuntu Manjaro Fedora Solus Neofetch About quit ; do
 
     PS3="Select the operation: "
@@ -57,7 +54,6 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       echo "Ubuntu script is starting..."
       echo -e "\033[0m "
       cat Ubuntu/ubuntu.sh
-      sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
       echo ""
       break
       ;;
@@ -66,7 +62,6 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       echo "Manjaro script is starting..."
       echo -e "\033[0m "
       sh Manjaro/manjaro.sh
-      sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
       echo ""
       exit
       break
@@ -77,7 +72,6 @@ ______ _____ _   _ _____  ___ ____________ _     _____
       echo -e "\033[0m "
       echo ""
       sh Fedora/fedora.sh
-      sudo cp Themes/Solarized-Dark-Cyan-GS-3.36/ /usr/share/themes/
       echo ""
       break
       ;;
