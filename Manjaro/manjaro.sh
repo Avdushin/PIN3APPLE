@@ -8,9 +8,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+" > ~/.bashrc "
 #fish_config
 if status is-interactive
     # Commands to run in interactive sessions can go here
 set -g fish_greeting
-end
-" > ~/.bashrc && sudo cp -r walls/ ~/ && sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Cyan /usr/share/themes/ && sudo cp -r icons/Tela-blue/ icons/Tela-blue-dark/ /usr/share/icons/ && echo "DONE!" && reboot 
+end" > ~/.config/fish/config.fish && sudo cp -r walls/ ~/ && sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Cyan /usr/share/themes/ && sudo cp -r icons/Tela-blue/ icons/Tela-blue-dark/ /usr/share/icons/ && echo "DONE!" && reboot 
