@@ -3,7 +3,6 @@
 GREEN=$'\033[0;32m'
 NORMAL=$'\033[0m'
 
-clear
 sh welcome.sh
 echo -e "\e[0;92mAuthor - https://github.com/Avdushin"
 echo ""
