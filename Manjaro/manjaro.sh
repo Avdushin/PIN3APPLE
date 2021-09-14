@@ -4,4 +4,4 @@ sudo pacman -Syu yay i3 i3blocks i3status i3lock polybar kitty krita fish ack vi
      #noisetorch
      if [ -d "$HOME/.local/bin" ] ; then
          PATH="$HOME/.local/bin:$PATH"
-     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Cyan /usr/share/themes/ && echo "DONE!" && reboot 
+     fi" > ~/.bashrc && sudo cp -r walls/ ~/ && sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Cyan /usr/share/themes/ && sudo cp -r icons/Tela-blue/ icons/Tela-blue-dark/ /usr/share/icons/ && echo "DONE!" && reboot 
