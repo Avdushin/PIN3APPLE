@@ -24,23 +24,32 @@ select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
           ;;
         About) 
           clear
-          echo -e " \e[0;1;33m
-                                                           
-______ _____ _   _ _____  ___ ____________ _     _____ 
-| ___ |_   _| \ | |____ |/ _ \| ___ | ___ | |   |  ___|
-| |_/ / | | |  \| |   / / /_\ | |_/ | |_/ | |   | |__  
-|  __/  | | | .   |   \ |  _  |  __/|  __/| |   |  __| 
-| |    _| |_| |\  .___/ | | | | |   | |   | |___| |___ 
-\_|    \___/\_| \_\____/\_| |_\_|   \_|   \_____\____/ 
-                                                       
-\033[0m  
- "
+          echo -e " \e[1;37m
+    WWWWWWWWWWWWWWWNXXNWNNNWNXNNWWWWWWWWWWWW
+    WWWWWWWWWWWWWNX0kxdxxxxkk0KNNWWWWWWWWWWW
+    WWWWWWWWWWWNX0Oxdl:;;;;coxOKNWWNWWWWWWWW
+    WWWWWWWWWWWN0xddoc;;::;;:lkKNWWWWWWWWWWW
+    WWWWWWWWWNX0Oxoc:::;,;::;cdkKNWWWWWWWWWW
+    WWWWWWWWWNXX0xo::;;;;;:c:cdOXNWWNWWWWWWW
+    \e[1;34mWWWWWWWWWWWNXKxlclloddlllllxKWWNWWWWWWWW
+    WWWWWWWWWWNWXkxxxkkkkkxxxkxxKWWWWWWWWWWW
+    WWWWWWWWWWNKdllolllodolllooloOXWWWWWWWWW
+    WWWWWWWWWWNk;;:::::lxd:;::::;oXWWWWWWWWW
+    WWWWWWWWWWNOc,''',lkkko:;,,,;xXWWWWWWWWW
+    WWWWWWWWWWXOxdlloxxkkkxkkddddOXWWWWWWWWW
+    WWWWWWWWWWXkxxdx00OkkkO0KkoxkOXWWWWWWWWW
+    \e[1;31mWWWWWWWWWWXOxko:lxkdldkxdccdx0NWWWWWWWWW
+    WWWWWWWWWWWKxddodxxxddddxdodkXWWWWWWWWWW
+    WWWWWWWWWWWNKOkdddxkkxdddddOXWWWWWWWWWWW
+    WWWWWWWWWWWWWNXKOkkOOkkkO0XNWWWWWWWWWWWW
+    WWWWWWWWWNWWWWWWWWNNNNNWWWWWWWWWWWWWWWWW
+"
 
-          echo "This program created to easy setup ANANAZZ I3 config"
+          echo -e "\033[0mThis program created to easy setup ANANAZZ I3 config"
           echo ""
           echo -e "\e[0;92mAuthor - https://github.com/Avdushin"
           echo -e " "
-          echo -e "\e[0;91mVERSION 0.0"
+          echo -e "\e[0;91mVERSION 0.1"
           echo -e "\033[0m "
           echo  "Put""$GREEN ENTER""$NORMAL to show operation list"
           echo ""
