@@ -9,7 +9,7 @@ echo ""
 echo -e "\e[0;1;33mChoose your distro..." 
 echo -e "\033[0m "
 
-select opt in Ubuntu Manjaro Fedora Solus Distro_info Neofetch About quit ; do
+select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
 
     PS3="Select the operation: "
 
