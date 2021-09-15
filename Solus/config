@@ -467,7 +467,7 @@ bindsym $mod+shift+d exec discord
 bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
 
 # terminal
-bindsym $mod+Return exec kitty -o background_opacity=0.8;focus #opacity litty
+bindsym $mod+Return exec kitty -o background_opacity=0.8;focus
 #bindsym $mod+Return exec kitty;focus #default kitty
 
 # telegram 
