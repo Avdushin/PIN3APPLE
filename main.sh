@@ -61,7 +61,7 @@ select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
       echo -e "\033[0;32m" 
       echo "Ubuntu script is starting..."
       echo -e "\033[0m "
-      cat Ubuntu/ubuntu.sh
+      sh Ubuntu/ubuntu.sh
       echo ""
       break
       ;;
