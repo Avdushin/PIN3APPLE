@@ -2,6 +2,8 @@
 # variables
 GREEN=$'\033[0;32m'
 NORMAL=$'\033[0m'
+ver="0.2"
+
 
 sh welcome.sh
 echo -e "\e[0;92mAuthor - https://github.com/Avdushin"
@@ -49,7 +51,7 @@ select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
           echo ""
           echo -e "\e[0;92mAuthor - https://github.com/Avdushin"
           echo -e " "
-          echo -e "\e[0;91mVERSION 0.1"
+          echo -e "\e[0;91mVERSION $ver"
           echo -e "\033[0m "
           echo  "Put""$GREEN ENTER""$NORMAL to show operation list"
           echo ""
