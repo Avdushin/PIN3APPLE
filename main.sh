@@ -60,16 +60,14 @@ select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
     # Distros
 
     Ubuntu)
-      echo -e "\033[0;32m" 
-      echo "Ubuntu script is starting..."
+      echo -e "\033[0;32mUbuntu script is starting..."
       echo -e "\033[0m "
       sh Ubuntu/ubuntu.sh
       echo ""
       break
       ;;
    Manjaro)
-      echo -e "\033[0;32m" 
-      echo "Manjaro script is starting..."
+      echo -e "\033[0;32mManjaro script is starting..."
       echo -e "\033[0m "
       sh Manjaro/manjaro.sh
       echo ""
@@ -77,8 +75,7 @@ select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
       break
       ;;
     Fedora)
-      echo -e "\033[0;32m" 
-      echo "Fedora script is starting..."
+      echo -e "\033[0;32mFedora script is starting..."
       echo -e "\033[0m "
       echo ""
       sh Fedora/fedora.sh
@@ -86,8 +83,7 @@ select opt in Ubuntu Fedora Manjaro Solus Distro_info Neofetch About quit ; do
       break
       ;;
     Solus)
-      echo -e "\033[0;32m" 
-      echo "solus script is starting..."
+      echo -e "\033[0;32mSolus script is starting..."
       echo -e "\033[0m "
       echo ""
       sh Solus/solus.sh
