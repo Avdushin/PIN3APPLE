@@ -127,15 +127,18 @@ bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto San
 #################                          how to exit, logoff, suspend, ...                        #################
 #####################################################################################################################
 
+# lock
+bindsym Mod1+l exec i3lock -n --color=#033E4D
+
 #Backup exit
 #Press ctrl+alt+x - check toolbar for next choices
 #bindsym control+mod1+X mode "$mode_system"
 bindsym $mod+X mode "$mode_system"
 
-set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system System (l) lock, (r) reboot, (s) shutdown
 mode "$mode_system" {
-    bindsym k exec lock
-    bindsym l exec logout
+    #bindsym l exec i3lock -n --color=#0D3541
+    bindsym l exec i3lock -n --color=#033E4D
     bindsym r exec reboot
     bindsym s exec shutdown -h 0
 
@@ -143,12 +146,6 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-
-# ArcoLinux Logout
-bindsym $mod+Shift+e exec --no-startup-id arcolinux-logout
-bindsym control+$mod1+X exec --no-startup-id arcolinux-logout
-
 
 #####################################################################################################################
 #################                          reload changed configuration                             #################
@@ -159,7 +156,7 @@ bindsym control+$mod1+X exec --no-startup-id arcolinux-logout
 bindsym $mod+Shift+r restart
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c exec reload
 
 
 
@@ -316,7 +313,8 @@ mode "resize" {
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # choose your font
-font pango:Noto Mono Regular 13
+font pango:Lato 13
+#font pango:Noto Mono Regular 13
 
 
 
@@ -334,7 +332,8 @@ font pango:Noto Mono Regular 13
 #assign [class="Chromium|Google-chrome"]                                             → 1
 
 # Workspace 2 text editor related
-#assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
+
+#assign [class="sublime_text"]       → 2
 #assign [class="Xed|xed|Brackets|Sublime_text|Code|Geany"]                                   → 2
 
 # Workspace 3 Firefox
@@ -353,7 +352,7 @@ assign [class="firefox"]                                                        
 #assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 virtual machines and settings
-assign [class="Telegram|Discord"]						    → 7
+assign [class="Telegram|Discord"]                           → 7
 
 # Workspace 8 file managers
 #assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
@@ -409,13 +408,16 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id volumeicon
 
 # variety 
-#exec --no-startup-id variety
+exec --no-startup-id variety
+
+#exec variety --set ~/walls/ananazz-true.jpg
+#exec variety --set ~/walls/pathologic-tragics.jpg
 
 # clipman
 #exec --no-startup-id xfce4-clipman
 
 # feh обои рабочего стола
-exec --no-startup-id feh --bg-fill ~/walls/solus.png &
+#exec --no-startup-id feh --bg-fill ~/walls/ananazz-true.jpg &
 
 # Polybar панель
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
@@ -438,18 +440,18 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # Старт программ
 
 # sublime_text
-bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text 
+bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text;Workspace 2
 #bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
 #bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
 
-# blanket
-bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket 
+# android studio
+bindsym $mod+shift+a exec sh ~/android-studio-2020.3.1.24-linux/android-studio/bin/studio.sh
 
-# chromium
-bindsym $mod+alt+c exec flatpak run org.chromium.Chromium
+# blanket
+bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket;Workspace 9
 
 # gcolor
-bindsym $mod+g exec gcolor3;floating enable
+bindsym $mod+g exec gcolor3;
 
 # nautilus
 bindsym $mod+e exec nautilus
@@ -458,7 +460,10 @@ bindsym $mod+e exec nautilus
 bindsym $mod+n exec ~/.local/bin/noisetorch 
 
 # discord
-bindsym $mod+shift+d exec discord 
+bindsym $mod+shift+d exec discord;Workspace 6
+
+# firefox
+bindsym $mod+shift+f exec --no-startup-id firefox;Workspace 3
 
 # freetube
 #bindsym $mod+y exec freetube 
@@ -466,9 +471,13 @@ bindsym $mod+shift+d exec discord
 # gitkraken
 bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
 
+# soundux
+bindsym $mod+shift+s exec flatpak run io.github.Soundux
+
 # terminal
 bindsym $mod+Return exec kitty -o background_opacity=0.8;focus
-#bindsym $mod+Return exec kitty;focus #default kitty
+#bindsym $mod+Return exec kitty;focus
+
 
 # telegram 
 bindsym $mod+t exec --no-startup-id telegram-desktop
@@ -485,54 +494,6 @@ bindsym control+mod1+c exec --no-startup-id catfish;focus
 
 #xkill
 bindsym --release $mod+Escape exec xkill
-
-#workspace related
-
-#workspace 1 related
-bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
-#qwerty/azerty conflict with w
-bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
-bindsym $mod+shift+f exec --no-startup-id firefox
-bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
-#bindsym control+mod1+c exec --no-startup-id chromium;focus
-
-#workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;focus
-
-#workspace 3 related
-bindsym $mod+F3 exec --no-startup-id inkscape;focus
-
-#workspace 4 related
-bindsym $mod+shift+y exec --no-startup-id freetube;focus
-
-#workspace 5 related
-bindsym $mod+F5 exec --no-startup-id meld;focus
-bindsym control+mod1+i exec --no-startup-id nitrogen;focus
-
-#workspace 6 related
-bindsym $mod+F6 exec --no-startup-id vlc;focus
-
-#workspace 7 related
-bindsym $mod+F7 exec --no-startup-id virtualbox;focus
-
-#workspace 8 related
-for_window [class="Thunar"] focus
-bindsym $mod+F8 exec --no-startup-id thunar;focus
-#bindsym $mod+Shift+t exec --no-startup-id thunar;focus
-bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-bindsym control+mod1+b exec --no-startup-id thunar;focus
-
-#workspace 9 related
-bindsym $mod+F9 exec --no-startup-id evolution;focus
-#bindsym $mod+F9 exec --no-startup-id geary;focus
-#bindsym control+mod1+e exec --no-startup-id geary;focus
-
-#workspace 10 related
-bindsym $mod+F10 exec --no-startup-id spotify;focus
-bindsym control+mod1+s exec --no-startup-id spotify;focus
-
-
-
 
 #####################################################################################################################
 #################                           скриншоты                                               #################
@@ -651,7 +612,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 
 # Border control
 hide_edge_borders both
-bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
+#bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 #changing border style
 #super+t in arcolinux is starting terminal
@@ -692,8 +653,8 @@ popup_during_fullscreen smart
 
 
 for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+gaps inner 8
+gaps outer 1
 #smart_gaps on
 #smart_borders on
 
@@ -752,9 +713,7 @@ mode "$mode_gaps_outer" {
 #####################################################################################################################
 
 #if you want transparency on non-focused windows, ...
-#exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
-
-exec --no-startup-id compton -b -f 
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
