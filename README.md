@@ -2,7 +2,7 @@
 
 ` Git clone https://github.com/Avdushin/PI3APPLE `
  
-` cd Pi3apple-i3/ `
+` cd  PI3APPLE `
  
 ` ./main.sh ` 
 
