@@ -2,7 +2,7 @@ import sys
 import pyfiglet
 import platform
 import os
-from tqdm import tqdm
+#from tqdm import tqdm
 from pyfiglet import figlet_format
 from termcolor import colored
 
