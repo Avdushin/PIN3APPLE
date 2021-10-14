@@ -18,7 +18,7 @@ sudo cp -r walls/ ~/
 sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Cyan /usr/share/themes/
 sudo cp -r icons/Tela-blue/ icons/Tela-blue-dark/ /usr/share/icons/
 sudo cp -r .fonts ~/
-echo -e "\e[0;92mDONE!"
-echo -e "\e[0;1;33m!Your system will be \e[0;91mREBOOT!"
+echo -e"\e[0;92mDONE!"
+echo -e"\e[0;1;33m!Your system will be \e[0;91mREBOOT!"
 sleep 5
 reboot 

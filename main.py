@@ -8,7 +8,7 @@ from termcolor import colored
 
 clear = os.system('clear')
 #welcome = pyfiglet.print_figlet("PIN3APPLE-PY",'slant')
-print((colored(figlet_format("PIN3APPLE-PY"), color="yellow")))
+print((colored(figlet_format("PIN3APPLE"), color="yellow")))
 # autor
 author = colored("Author - https://github.com/Avdushin\n", 'green')
 print(author)
