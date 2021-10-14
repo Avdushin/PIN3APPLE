@@ -1,6 +1,8 @@
 clear
 echo "Installing requirements..."
-pip3 install -r req.txt
+/usr/bin/python3.9 -m pip install --upgrade pip
+pip3 install termcolor
+pip3 install pyfiglet
 echo " "
 echo "DONE!"
 sleep 2
