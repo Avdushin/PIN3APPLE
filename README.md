@@ -1,6 +1,6 @@
 ### INSTALATION 
 
-` Git clone https://github.com/Avdushin/PI3APPLE `
+` git clone https://github.com/Avdushin/PI3APPLE `
  
 ` cd  PI3APPLE `
  
