@@ -6,7 +6,7 @@
  
 ` pip3 install -r req.txt ` 
 
-` python3 main.sh`
+` python3 main.py`
 
 ![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/898308992495923230/unknown.png)
 
