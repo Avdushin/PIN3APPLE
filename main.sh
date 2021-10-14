@@ -7,4 +7,4 @@ echo " "
 echo "DONE!"
 sleep 2
 clear
-python3 main.sh
+python3 main.py
