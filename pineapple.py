@@ -35,19 +35,19 @@ def choose_dist():
 	print("4)Fedora")
 	print("5)Info")
 	print("0)Exit")
-	cmd = input("Choose an action: ")
-	if cmd == "1":
+	comand = input("Choose an action: ")
+	if comand == "1":
 	    os.system('sh Solus/solus.sh')
-	elif cmd == "2":
+	elif comand == "2":
 		os.system('sh Ubuntu/ubuntu.sh')
-	elif cmd == "3":
+	elif comand == "3":
 	    os.system('sh Manjaro/manjaro.sh')
-	elif cmd == "4":
+	elif comand == "4":
 	    os.system('sh Fedora/fedora.sh')
-	elif cmd == "5":
+	elif comand == "5":
 	    os.system('sh info.sh')
 	    choose_dist()
-	elif cmd == "0":
+	elif comand == "0":
 		ext = colored("Exit", 'red')
 		print(ext)
 	else:

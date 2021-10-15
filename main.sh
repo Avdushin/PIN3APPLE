@@ -6,4 +6,4 @@ pip3 install pyfiglet
 echo -e "\e[0;92mDONE!"
 sleep 2
 clear
-python3 main.py
+python3 pineapple.py
