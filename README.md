@@ -6,7 +6,7 @@
  
 ### DEFAULT INSTALL 
 
-` ./main.sh`
+` ./install.sh`
 
 ### Manjaro/Arch INSTALL 
 
