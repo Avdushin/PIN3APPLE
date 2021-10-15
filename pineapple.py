@@ -45,7 +45,7 @@ def choose_dist():
 	elif comand == "4":
 	    os.system('sh Fedora/fedora.sh')
 	elif comand == "5":
-	    os.system('sh info.sh')
+	    os.system('sh nfo.sh')
 	    choose_dist()
 	elif comand == "0":
 		ext = colored("Exit", 'red')
