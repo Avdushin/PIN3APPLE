@@ -409,13 +409,13 @@ exec_always --no-startup-id numlockx on
 #exec --no-startup-id volumeicon
 
 # variety 
-#exec --no-startup-id variety
+exec --no-startup-id variety
 
 # clipman
 #exec --no-startup-id xfce4-clipman
 
 # feh обои рабочего стола
-exec --no-startup-id feh --bg-fill ~/walls/ubuntu.png &
+#exec --no-startup-id feh --bg-fill ~/walls/ubuntu.png &
 
 # Polybar панель
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
