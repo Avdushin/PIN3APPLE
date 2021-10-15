@@ -1,9 +1,8 @@
 #!/bin/bash
 sudo apt-get update -y
-sudo apt-get upgrade -y
 clear
 echo -e"\e[0;92mUbuntu script starting..."
-sudo apt-get install i3 i3blocks i3status i3-gaps i3lock polybar kitty krita fish ack vim neofetch flameshot feh rofi discord steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y
+sudo apt-get install i3 i3blocks i3status i3-gaps i3lock polybar kitty krita fish ack vim neofetch flameshot variety feh rofi discord steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y
 sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files
