@@ -17,4 +17,4 @@
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
 
-ANANAZZ WALLPAPERS BY [SERGO](https://vk.com/s.sm1rn0f)
+###### **Ananazz wallpapers by [Sergo](https://vk.com/s.sm1rn0f)**
