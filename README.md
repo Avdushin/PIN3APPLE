@@ -6,13 +6,13 @@
  
 ### DEFAULT INSTALL 
 
-` ./install.sh`
+` ./install.sh `
 
 ### Manjaro/Arch INSTALL 
 
 ` ./manjaro-install.sh`
 
-![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/898308992495923230/unknown.png)
+![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/898966115877810246/unknown.png)
 
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
