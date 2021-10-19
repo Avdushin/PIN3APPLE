@@ -12,6 +12,9 @@
 
 ` ./manjaro-install.sh`
 
+
+ANANAZZ WALLPAPERS BY [SERGO](https://vk.com/s.sm1rn0f)
+
 ![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/898966115877810246/unknown.png)
 
 
