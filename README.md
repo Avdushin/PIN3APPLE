@@ -1,8 +1,8 @@
 ### INSTALATION 
 
-` git clone https://github.com/Avdushin/PI3APPLE `
+` git clone https://github.com/Avdushin/PIN3APPLE `
  
-` cd  PI3APPLE `
+` cd  PIN3APPLE `
  
 ### DEFAULT INSTALL 
 
