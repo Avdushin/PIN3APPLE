@@ -13,7 +13,7 @@ print((colored(figlet_format("PIN3APPLE"), color="yellow")))
 author = colored("Author - https://github.com/Avdushin\n", 'green')
 print(author)
 # version
-ver = colored("1.0")
+ver = colored("1.2.0")
 version_output = colored(f"VERSION: {ver}\n", 'red')
 print(version_output)
 # os name
