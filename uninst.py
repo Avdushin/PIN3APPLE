@@ -4,7 +4,7 @@ from pyfiglet import figlet_format
 from termcolor import colored
 from printy import printy
 
-ver = "[rB]1.2.0"
+ver = "[rB]1.3.0"
 
 os.system("clear")
 print((colored(figlet_format("PIN3APPLE"), color="yellow")))
