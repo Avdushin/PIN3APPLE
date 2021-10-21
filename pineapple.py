@@ -34,6 +34,7 @@ def choose_dist():
 	print("3)Manjaro")
 	print("4)Fedora")
 	print("5)Info")
+	print("9)Uninstall")
 	print("0)Exit")
 	comand = input("Choose an action: ")
 	if comand == "1":
@@ -47,6 +48,8 @@ def choose_dist():
 	elif comand == "5":
 	    os.system('sh nfo.sh')
 	    choose_dist()
+	elif comand == "9":
+		os.system('sh uninstall.sh')
 	elif comand == "0":
 		ext = colored("Exit", 'red')
 		print(ext)

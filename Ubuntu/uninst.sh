@@ -1,0 +1,2 @@
+sudo apt-get remove i3 i3blocks i3status i3-gaps i3lock polybar kitty krita fish ack vim neofetch flameshot variety feh rofi discord steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y
+rm -rf ~/.config/i3/config ~/.config/polybar/ ~/.config/kitty/ ~/.config/variety/ ~/.appz/ ~/walls/

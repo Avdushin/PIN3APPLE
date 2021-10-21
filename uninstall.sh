@@ -1,1 +1,6 @@
-rm -rf ~/.config/i3/config ~/.config/polybar/ ~/.config/kitty/ ~/.config/variety/ ~/.appz/ ~/walls/
+clear
+/usr/bin/python3.9 -m pip install --upgrade pip
+pip3 install termcolor
+pip3 install pyfiglet
+pip3 install printy
+python3 uninst.py
