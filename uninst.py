@@ -1,3 +1,9 @@
+"""
+PIN3APPLE - it's a little util to fast setup ANANAZZ I3 configuration.
+AUTHOR - ANANAZ(https://github.com/Avdushin)
+Program support from September 12, 2021
+Avdushin - copyright 2021
+"""
 import pyfiglet, platform, time, os, sys
 from tqdm import tqdm
 from pyfiglet import figlet_format
