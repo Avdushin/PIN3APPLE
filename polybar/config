@@ -139,7 +139,7 @@ font-4 = "coins:style=Regular:size=8;0"
 
 modules-left = i3 xwindow  
 modules-center = 
-modules-right =  cpu2 memory3 volume date xkeyboard2 variety trash wireless-network 
+modules-right =  cpu2 memory3 volume date xkeyboard2 uptime variety trash wireless-network 
 
 separator = 
 
