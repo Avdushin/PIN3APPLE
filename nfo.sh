@@ -1,1 +1,0 @@
-echo -e "\e[0;1;33mChoose your distro, wait some minutes and relax!\033[0m"
