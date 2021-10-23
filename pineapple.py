@@ -4,7 +4,6 @@ AUTHOR - ANANAZ(https://github.com/Avdushin)
 Program support from September 12, 2021
 Avdushin - copyright 2021
 """
-
 import sys
 import pyfiglet
 import platform
@@ -22,7 +21,7 @@ print(f"[yellow]{prname}")
 print("[green]Author - https://github.com/Avdushin\n")
 
 # version 
-ver = ("[red]1.3.0")
+ver = ("[red]1.3.5")
 # print version
 print(f"[red]VERSION: {ver}\n")
 

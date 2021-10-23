@@ -1,23 +1,22 @@
 import pyfiglet, platform, time, os, sys
 from tqdm import tqdm
 from pyfiglet import figlet_format
-from termcolor import colored
-from printy import printy
+from rich import print
 
-ver = "[rB]1.3.0"
+ver = "[red b]1.3.5"
 
 os.system("clear")
-print((colored(figlet_format("PIN3APPLE"), color="yellow")))
-print((colored(figlet_format("UNINSTALLER"), color="red")))
-# printy("\n[yB]PINEAPPLE\n@[rB]UNINSTALL\n")
-# printy(ver+"\n")
 
+#logo 
+pine = figlet_format("PIN3APPLE")
+apple = figlet_format("UNINSTALLER")
+print(f"[yellow]{pine}{apple}")
 # progress bar
 def progress():
 	for i in tqdm (range (100), desc="Uninstalling..."):
 		time.sleep(0.01)
 	print("PIN3APPLE I3 config was uninstalled...")
-	printy("[yB]Your system will be@ [rB]reboot@ [yB]now!")
+	print("[yellow b]Your system will be [red b]reboot [yellow b]now!")
 	time.sleep(2)
 
 
@@ -36,12 +35,12 @@ def uninst_choose():
 		if rmquest == "y":
 			os.system('sh Solus/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh Solus/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		else:
 			pass
@@ -51,12 +50,12 @@ def uninst_choose():
 		if rmquest == "y":
 			os.system('sh Ubuntu/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh Ubuntu/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		else:
 			pass
@@ -66,12 +65,12 @@ def uninst_choose():
 		if rmquest == "y":
 			os.system('sh Manjaro/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh Manjaro/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		else:
 			pass
@@ -81,36 +80,36 @@ def uninst_choose():
 		if rmquest == "y":
 			os.system('sh Fedora/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh Fedora/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		else:
 			pass
 	
 	elif comand == "5":
-		printy("\n[B]Choose youre distro to@ [rB]remove@ [yB]config... \n")
-		uninst_choose()
+		print("\n[yellow b]Choose youre distro to [red b]REMOVE [yellow b]config... \n")
 	if comand == "4":
-		rmquest = input("Are you sure you want to remove the Fedora config? [y/n]: ")
+		rmquest = input("Are you sure you want to remove the Fedora config? [[red]y/n[/red]]: ")
 		if rmquest == "y":
 			os.system('sh Fedora/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh Fedora/uninst.sh')
 			progress()
-			printy("[rB]!!!Reboot!!!")
+			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		else:
 			pass
-
 	elif comand == "7":
 			os.system('python3 pineapple.py')
+	elif comand == "0":
+		print("[red]Exit")
 	else:
 	  		uninst_choose()
 
