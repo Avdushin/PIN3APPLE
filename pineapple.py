@@ -26,19 +26,15 @@ ver = ("[red]1.3.5")
 print(f"[red]VERSION: {ver}\n")
 
 # distro choose
-print("[yellow]Choose your distro...\n")
+print("[yellow]Choose your distro...")
 
 """Distro choose function"""
 
 def choose_dist():
-
-	print("1)Solus")
-	print("2)Ubuntu")
-	print("3)Manjaro")
-	print("4)Fedora")
-	print("5)Info")
-	print("9)Uninstall")
-	print("0)Exit")
+	print("\n1) Solus   2) Ubuntu")
+	print("3) Manjaro 4) Fedora")
+	print("5) Info    9) Uninstall")
+	print("0) Exit\n")
 	comand = input("Choose an action: ")
 	if comand == "1":
 	    os.system('sh Solus/solus.sh')

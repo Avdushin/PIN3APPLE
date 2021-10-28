@@ -27,13 +27,10 @@ def progress():
 
 
 def uninst_choose():
-	print("1)Solus")
-	print("2)Ubuntu")
-	print("3)Manjaro")
-	print("4)Fedora")
-	print("5)Info")
-	print("7)Install")
-	print("0)Exit")
+	print("\n1) Solus   2) Ubuntu")
+	print("3) Manjaro 4) Fedora")
+	print("5) Info    7) Install")
+	print("0) Exit\n")
 	comand = input("Choose your distro: ")
 
 	if comand == "1":

@@ -12,7 +12,7 @@
 
 ` ./manjaro-install.sh`
 
-![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/900871191198310440/unknown.png)
+![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/903180849736990740/unknown.png)
 
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
