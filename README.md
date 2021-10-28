@@ -8,7 +8,7 @@
 
 ` ./install.sh `
 
-![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/903180849736990740/unknown.png)
+![Изображение](src/assets/demo.png)
 
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
