@@ -9,7 +9,7 @@ from tqdm import tqdm
 from pyfiglet import figlet_format
 from rich import print
 
-ver = "[red b]1.3.5"
+ver = "[red b]2.0"
 
 os.system("clear")
 
