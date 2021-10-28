@@ -8,10 +8,6 @@
 
 ` ./install.sh `
 
-### Manjaro/Arch INSTALL 
-
-` ./manjaro-install.sh`
-
 ![Изображение](https://cdn.discordapp.com/attachments/650681889308278785/903180849736990740/unknown.png)
 
 
