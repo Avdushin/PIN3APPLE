@@ -21,7 +21,7 @@ print(f"[yellow]{prname}")
 print("[green]Author - https://github.com/Avdushin\n")
 
 # version 
-ver = ("[red]1.3.5")
+ver = ("[red]2.0")
 # print version
 print(f"[red]VERSION: {ver}\n")
 
@@ -37,13 +37,13 @@ def choose_dist():
 	print("0) Exit\n")
 	comand = input("Choose an action: ")
 	if comand == "1":
-	    os.system('sh Solus/solus.sh')
+	    os.system('sh src/distros/Solus/solus.sh')
 	elif comand == "2":
-		os.system('sh Ubuntu/ubuntu.sh')
+		os.system('sh src/distros/Ubuntu/ubuntu.sh')
 	elif comand == "3":
-	    os.system('sh Manjaro/manjaro.sh')
+	    os.system('sh src/distros/Manjaro/manjaro.sh')
 	elif comand == "4":
-	    os.system('sh Fedora/fedora.sh')
+	    os.system('sh src/distros/Fedora/fedora.sh')
 	elif comand == "5":
 	    print("\n[yellow b]HOW IT WORKS?\nCHOOSE YOUR DISTRO, WAIT SOME MINUTES AND RELAX!\n\n[white]INSTRUCTION:\n[#46C959][[#CE270B]RUS[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
 	    choose_dist()

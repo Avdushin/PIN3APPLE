@@ -5,7 +5,7 @@ echo -e"\e[0;92mFedora script starting..."
 sudo dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y && sudo dnf install \
   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf install i3 i3blocks i3status i3-gaps i3lock polybar kitty krita fish ack vim neofetch flameshot variety feh rofi discord steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y --allowerasing
+sudo dnf install i3 i3blocks i3status i3-gaps i3lock polybar kitty krita fish ack vim bottom neofetch flameshot variety feh rofi discord steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y --allowerasing
 sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files
@@ -23,6 +23,6 @@ sudo cp -r Themes/Solarized-Dark-Blue Themes/Solarized-Dark-Cyan /usr/share/them
 sudo cp -r icons/Tela-blue/ icons/Tela-blue-dark/ /usr/share/icons/
 sudo cp -r .fonts ~/
 echo -e"\e[0;92mDONE!"
-echo -e"\e[0;1;33m!Your system will be \e[0;91mREBOOT!"
+echo -e"\e[0;91m!\e[0;1;33mYour system will be \e[0;91mREBOOT!"
 sleep 5
 reboot 
