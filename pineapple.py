@@ -45,6 +45,7 @@ def menu():
 		info()
 		menu()
 	elif wtd == "4":
+		import os
 		os.system('sh uninstall.sh')
 	elif wtd == "0":
 		print("")
