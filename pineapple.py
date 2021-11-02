@@ -20,7 +20,7 @@ ver = ("[red]3.0")
 print(f" [yellow]VERSION: {ver}")
 
 # os
-os = platform.platform()
+myos = platform.platform()
 
 # info
 def info():
@@ -30,6 +30,7 @@ def info():
 
 # general menu
 def menu():
+	import os
 	print("\n [b cyan]1)[yellow] DISTROS [b cyan]2) [yellow]MY OS")
 	print("\n [b cyan]3)[yellow] INFO    [b cyan]4) [yellow]Uninstall[cyan]\n\n 0) [red]Quit \n")
 	wtd = input(" Coose an action: ")
@@ -39,7 +40,7 @@ def menu():
 	if wtd == "1":
 		distros()
 	elif wtd == "2":
-		print(f'Your system is {os}')
+		print(f'Your system is {myos}')
 		menu()
 	elif wtd == "3":
 		info()
