@@ -10,11 +10,11 @@
 
 ##### MAIN MENU
 
-![Изображение](Pi3apple-i3/src/assets/demo-gm.png)
+![](src/assets/demo-gm.png)
 
 ##### DOSTRO MENU
 
-![](Pi3apple-i3/src/assets/demo-dm.png)
+![](src/assets/demo-dm.png)
 
 **CHOOSE YOUR DISTRO AND RELAX**
 
