@@ -4,55 +4,72 @@ AUTHOR - ANANAZ(https://github.com/Avdushin)
 Program support from September 12, 2021
 Avdushin - copyright 2021
 """
-import sys
-import pyfiglet
-import platform
-import os
 from rich import print
 from pyfiglet import figlet_format
 
-# clear console
-clear = os.system('clear')
-# print logo
-prname = figlet_format("PIN3APPLE")
+import pyfiglet, platform, os, sys
+
+os.system('clear')
+
+# logo
+prname = figlet_format(" PIN3APPLE")
 print(f"[yellow]{prname}")
 
-# autor
-print("[green]Author - https://github.com/Avdushin\n")
+# version
+ver = ("[red]3.0")
+print(f" [yellow]VERSION: {ver}")
 
-# version 
-ver = ("[red]2.0")
-# print version
-print(f"[red]VERSION: {ver}\n")
+# os
+os = platform.platform()
 
-# distro choose
-print("[yellow]Choose your distro...")
+# info
+def info():
+	 print("\n[yellow b]HOW IT WORKS?\nCHOOSE YOUR DISTRO, WAIT SOME MINUTES AND RELAX!\n\n[white]INSTRUCTION:\n[#46C959][[#CE270B]RUS[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
 
-"""Distro choose function"""
+""" MENUS """
 
-def choose_dist():
-	print("\n1) Solus   2) Ubuntu")
-	print("3) Manjaro 4) Fedora")
-	print("5) Info    9) Uninstall")
-	print("0) Exit\n")
-	comand = input("Choose an action: ")
-	if comand == "1":
-	    os.system('sh src/distros/Solus/solus.sh')
-	elif comand == "2":
-		os.system('sh src/distros/Ubuntu/ubuntu.sh')
-	elif comand == "3":
-	    os.system('sh src/distros/Manjaro/manjaro.sh')
-	elif comand == "4":
-	    os.system('sh src/distros/Fedora/fedora.sh')
-	elif comand == "5":
-	    print("\n[yellow b]HOW IT WORKS?\nCHOOSE YOUR DISTRO, WAIT SOME MINUTES AND RELAX!\n\n[white]INSTRUCTION:\n[#46C959][[#CE270B]RUS[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
-	    choose_dist()
-	elif comand == "9":
+# general menu
+def menu():
+	print("\n [b cyan]1)[yellow] DISTROS [b cyan]2) [yellow]MY OS")
+	print("\n [b cyan]3)[yellow] INFO    [b cyan]4) [yellow]Uninstall[cyan]\n\n 0) [red]Quit \n")
+	wtd = input(" Coose an action: ")
+	print("")
+
+	# choose logical
+	if wtd == "1":
+		distros()
+	elif wtd == "2":
+		print(f'Your system is {os}')
+		menu()
+	elif wtd == "3":
+		info()
+		menu()
+	elif wtd == "4":
 		os.system('sh uninstall.sh')
-	elif comand == "0":
-		print("[red]Exit")
+	elif wtd == "0":
+		print("")
 	else:
-  		choose_dist()
+		menu()
 
-# start general function
-choose_dist()
+# distros 
+def distros():
+	import os
+	print("\n [b cyan]1) [#DF5B2C]Ubuntu  [b cyan]2) [#2C67DF]Solus")
+	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Back    [b cyan] 0)[b red] Quit\n")
+	dist = input("Choose your distro: ")
+	# Install logic
+	if dist == "1":
+		os.system('sh src/distros/Ubuntu/ubuntu.sh') 
+	elif dist == "2":
+		os.system('sh src/distros/Solus/solus.sh')
+	elif dist == "3":
+		os.system('sh src/distros/Manjaro/manjaro.sh')
+	elif dist == "4":
+		os.system('sh src/distros/Fedora/fedora.sh')
+	elif dist == "5":
+		menu()
+	elif dist == "0":
+		print("")
+	else:
+		distros()
+menu()
