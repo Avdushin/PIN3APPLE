@@ -9,7 +9,7 @@ from tqdm import tqdm
 from pyfiglet import figlet_format
 from rich import print
 
-ver = "[red b]2.0"
+ver = "[red b]3.0"
 
 os.system("clear")
 
@@ -27,10 +27,10 @@ def progress():
 
 
 def uninst_choose():
-	print("\n1) Solus   2) Ubuntu")
-	print("3) Manjaro 4) Fedora")
-	print("5) Info    7) Install")
-	print("0) Exit\n")
+	print("\n  1) [b]Solus   2) Ubuntu\n")
+	print("  3) [b]Manjaro 4) Fedora\n")
+	print("  5) [yellow b]Info    [cyan b]7)[green b] Install\n")
+	print("  0) [red b]Exit\n")
 	comand = input("Choose your distro: ")
 
 	if comand == "1":
