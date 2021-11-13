@@ -47,7 +47,7 @@ def menu():
 		menu()
 	elif wtd == "4":
 		import os
-		os.system('sh uninstall.sh')
+		os.system('sh src/uninstallru.sh')
 	elif wtd == "5":
 		os.system('python3 main.py')
 	elif wtd == "0":

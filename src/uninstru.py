@@ -1,7 +1,7 @@
 """
-PIN3APPLE - it's a little util to fast setup ANANAZZ I3 configuration.
-AUTHOR - ANANAZ(https://github.com/Avdushin)
-Program support from September 12, 2021
+PIN3APPLE - утилита для быстрой установки моей конфигурации I3wm
+АВТОР - ANANAZ(https://github.com/Avdushin)
+Программа поддерживается с 12 сентября, 2021
 Avdushin - copyright 2021
 """
 import pyfiglet, platform, time, os, sys
@@ -11,82 +11,82 @@ from rich import print
 
 os.system("clear")
 
-#logo 
+# лого
 pine = figlet_format("PIN3APPLE")
 apple = figlet_format("UNINSTALLER")
 print(f"[yellow]{pine}{apple}")
-# progress bar
+# панель прогресса
 def progress():
-	for i in tqdm (range (100), desc="Uninstalling..."):
+	for i in tqdm (range (100), desc="Удаление..."):
 		time.sleep(0.01)
-	print("PIN3APPLE I3 config was uninstalled...")
-	print("[yellow b]Your system will be [red b]reboot [yellow b]now!")
+	print("Конфигурация PIN3APPLE I3 бфла удалена...")
+	print("[yellow b]Ваша сиситема будет [red b]перезагружена [yellow b]!")
 	time.sleep(2)
 
 
 def uninst_choose():
 	print("\n  1) [b]Solus   2) Ubuntu\n")
 	print("  3) [b]Manjaro 4) Fedora\n")
-	print("  5) [yellow b]Info    [cyan b]7)[green b] Install\n")
-	print("  0) [red b]Exit\n")
-	comand = input("Choose your distro: ")
+	print("  5) [yellow b]Мануал  [cyan b]7)[green b] Установка\n")
+	print("  0) [red b]Выход\n")
+	comand = input("Выберите ваш дистрибутив: ")
 
 	if comand == "1":
-		rmquest = input("Are you sure you want to remove the Solus config? [y/n]: ")
+		rmquest = input("Вы уверены что хотите удалить конфиг для Solus? [y/n]: ")
 		if rmquest == "y":
 			os.system('sh src/distros/Solus/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh src/distros/Solus/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		else:
 			pass
 	
 	if comand == "2":
-		rmquest = input("Are you sure you want to remove the Ubuntu config? [y/n]: ")
+		rmquest = input("Вы уверены что хотите удалить конфиг для Ubuntu? [y/n]: ")
 		if rmquest == "y":
 			os.system('sh src/distros/Ubuntu/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh src/distros/Ubuntu/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		else:
 			pass
 
 	if comand == "3":
-		rmquest = input("Are you sure you want to remove the Manjaro config? [y/n]: ")
+		rmquest = input("Вы уверены что хотите удалить конфиг для Manjaro? [y/n]: ")
 		if rmquest == "y":
 			os.system('sh src/distros/Manjaro/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh src/distros/Manjaro/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		else:
 			pass
 
 	if comand == "4":
-		rmquest = input("Are you sure you want to remove the Fedora config? [y/n]: ")
+		rmquest = input("Вы уверены что хотите удалить конфиг для Fedora? [y/n]: ")
 		if rmquest == "y":
 			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
-			print("[red b]!!!Reboot!!!")
+			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		else:
 			pass
@@ -94,9 +94,9 @@ def uninst_choose():
 	elif comand == "5":
 		print("\n[yellow b]Choose youre distro to [red b]REMOVE [yellow b]config... \n")
 	elif comand == "7":
-			os.system('python3 pineapple.py')
+			os.system('python3 ./pineapple-ru.py')
 	elif comand == "0":
-		print("[red]Exit")
+		print("[red]Выход")
 	else:
 	  		uninst_choose()
 
