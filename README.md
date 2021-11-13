@@ -26,7 +26,6 @@
 
 ![](src/assets/demo-dm-ru.png)
 
-**CHOOSE YOUR DISTRO AND RELAX**
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
 
