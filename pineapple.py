@@ -6,6 +6,7 @@ Avdushin - copyright 2021
 """
 from rich import print
 from pyfiglet import figlet_format
+from ver import ver
 
 import pyfiglet, platform, os, sys
 
@@ -15,8 +16,7 @@ os.system('clear')
 prname = figlet_format(" PIN3APPLE")
 print(f"[yellow]{prname}")
 
-# version
-ver = ("[red]3.0")
+# ver
 print(f" [yellow]VERSION: {ver}")
 
 # os
@@ -31,8 +31,8 @@ def info():
 # general menu
 def menu():
 	import os
-	print("\n [b cyan]1)[yellow] DISTROS [b cyan]2) [yellow]MY OS")
-	print("\n [b cyan]3)[yellow] INFO    [b cyan]4) [yellow]Uninstall[cyan]\n\n 0) [red]Quit \n")
+	print("\n [b cyan]1)[yellow] DISTROS [b cyan] 2) [yellow]MY OS")
+	print("\n [b cyan]3)[yellow] INFO    [b cyan] 4) [yellow]Uninstall[cyan]\n\n 5) [yellow]language [cyan]0) [red]Quit \n")
 	wtd = input(" Coose an action: ")
 	print("")
 
@@ -48,6 +48,8 @@ def menu():
 	elif wtd == "4":
 		import os
 		os.system('sh uninstall.sh')
+	elif wtd == "5":
+		os.system('python3 main.py')
 	elif wtd == "0":
 		print("")
 	else:
@@ -58,7 +60,7 @@ def distros():
 	import os
 	print("\n [b cyan]1) [#DF5B2C]Ubuntu  [b cyan]2) [#2C67DF]Solus")
 	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Back    [b cyan] 0)[b red] Quit\n")
-	dist = input("Choose your distro: ")
+	dist = input(" Choose your distro: ")
 	# Install logic
 	if dist == "1":
 		os.system('sh src/distros/Ubuntu/ubuntu.sh') 

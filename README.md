@@ -1,12 +1,12 @@
-### INSTALATION 
+### INSTALLATION / УСТАНОВКА
 
-` git clone https://github.com/Avdushin/PIN3APPLE `
+`git clone https://github.com/Avdushin/PIN3APPLE`
 
-` cd  PIN3APPLE `
+`cd PIN3APPLE`
 
-### DEFAULT INSTALL 
+`./install.sh`
 
-` ./install.sh `
+#### [ENG] DEMO
 
 ##### MAIN MENU
 
@@ -16,10 +16,17 @@
 
 ![](src/assets/demo-dm.png)
 
+#### [РУС] ДЕМО
+
+##### ГЛАВНОЕ МЕНЮ
+
+![](src/assets/demo-gm-ru.png)
+
+##### МЕНЮ ДИСТРИБУТИВОВ
+
+![](src/assets/demo-dm-ru.png)
+
 **CHOOSE YOUR DISTRO AND RELAX**
-
-
-
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
 

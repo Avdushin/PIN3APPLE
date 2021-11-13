@@ -3,6 +3,7 @@ echo -e "\e[0;92mUpdating..."
 sudo eopkg up -y
 clear
 sudo apt-get update -y
+sudo apt install python3-pip
 clear
 sudo pacman -Suy
 sudo pacman -S python-pip
@@ -17,4 +18,4 @@ pip3 install tqdm
 echo -e "\e[0;92mDONE!"
 sleep 2
 clear
-python3 pineapple.py
+python3 main.py
