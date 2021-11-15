@@ -18,4 +18,4 @@ pip3 install tqdm
 echo -e "\e[0;92mDONE!"
 sleep 2
 clear
-python3 main.py
+python3 src/pineapple.py

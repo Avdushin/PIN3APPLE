@@ -15,6 +15,27 @@ os.system("clear")
 pine = figlet_format("PIN3APPLE")
 apple = figlet_format("UNINSTALLER")
 print(f"[yellow]{pine}{apple}")
+
+# FUNCTIONS
+
+#  languages
+def language():
+	print("\n 1)РУССКИЙ \n\n 2)English\n\n 5)Back \n\n 0)[red b]Quit\n\n")
+	
+	lang = input(" Выберите язык/Choose language: ")
+
+#  language coose / выбор языка
+	if lang == "1":
+		os.system("python3 src/uninstru.py")
+	elif lang == "2":
+		os.system("python3 src/uninst.py")
+	elif lang == "5":
+		uninst_choose()
+	elif lang == "0":
+		print("")
+	else:
+		language()
+
 # progress bar
 def progress():
 	for i in tqdm (range (100), desc="Uninstalling..."):
@@ -28,7 +49,7 @@ def uninst_choose():
 	print("\n  1) [b]Solus   2) Ubuntu\n")
 	print("  3) [b]Manjaro 4) Fedora\n")
 	print("  5) [yellow b]Info    [cyan b]7)[green b] Install\n")
-	print("  0) [red b]Exit\n")
+	print("  [cyan b]8)[yellow] Язык [cyan b]0) [red b]Exit\n")
 	comand = input("Choose your distro: ")
 
 	if comand == "1":
@@ -94,11 +115,13 @@ def uninst_choose():
 	elif comand == "5":
 		print("\n[yellow b]Choose youre distro to [red b]REMOVE [yellow b]config... \n")
 	elif comand == "7":
-			os.system('python3 pineapple.py')
+			os.system('python3 src/pineapple.py')
+	elif comand == "8":
+		language()
 	elif comand == "0":
 		print("[red]Exit")
 	else:
-	  		uninst_choose()
+	  	uninst_choose()
 
 # start general function
 uninst_choose()

@@ -22,6 +22,24 @@ print(f" [yellow]ВЕРСИЯ: {ver}")
 # ос
 myos = platform.platform()
 
+#  languages
+def language():
+	print("\n 1)РУССКИЙ \n\n 2)English\n\n 5)Назад \n\n 0)[red b]Выход\n\n")
+	
+	lang = input(" Выберите язык/Choose language: ")
+
+#  language coose / выбор языка
+	if lang == "1":
+		os.system("python3 src/pineapple-ru.py")
+	elif lang == "2":
+		os.system("python3 src/pineapple.py")
+	elif lang == "5":
+		menu()
+	elif lang == "0":
+		print("")
+	else:
+		language()
+
 # информация
 def info():
 	 print("\n[yellow b]Как это работает?\nВыберите ваш дистрибутив, и дождитесь окончания установки.\n\n[white]ИНСТРУКЦИЯ:\n[#46C959][[#CE270B]РУС[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
@@ -32,7 +50,7 @@ def info():
 def menu():
 	import os
 	print("\n [b cyan]1)[yellow] ДИСТРИБУТИВЫ [b cyan]2) [yellow]МОЯ СИСТЕМА")
-	print("\n [b cyan]3)[yellow] Мануал       [b cyan]4) [yellow]Удалить изменения[cyan]\n\n 5) [yellow]Язык [cyan]        0) [red]Выход \n")
+	print("\n [b cyan]3)[yellow] Мануал       [b cyan]4) [yellow]Удалить конфигурацию[cyan]\n\n 5) [yellow]Язык [cyan]        0) [red]Выход \n")
 	wtd = input(" Выберите действие: ")
 	print("")
 
@@ -49,7 +67,7 @@ def menu():
 		import os
 		os.system('sh src/uninstallru.sh')
 	elif wtd == "5":
-		os.system('python3 main.py')
+		language()
 	elif wtd == "0":
 		print("")
 	else:

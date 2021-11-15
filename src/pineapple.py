@@ -22,6 +22,25 @@ print(f" [yellow]VERSION: {ver}")
 # os
 myos = platform.platform()
 
+#  languages
+def language():
+	print("\n 1)РУССКИЙ \n\n 2)English\n\n 5)Back \n\n 0)[red b]Quit\n\n")
+	
+	lang = input(" Выберите язык/Choose language: ")
+
+#  language coose / выбор языка
+	if lang == "1":
+		os.system("python3 src/pineapple-ru.py")
+	elif lang == "2":
+		os.system("python3 src/pineapple.py")
+	elif lang == "5":
+		menu()
+	elif lang == "0":
+		print("")
+	else:
+		language()
+
+
 # info
 def info():
 	 print("\n[yellow b]HOW IT WORKS?\nCHOOSE YOUR DISTRO, WAIT SOME MINUTES AND RELAX!\n\n[white]INSTRUCTION:\n[#46C959][[#CE270B]RUS[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
@@ -47,9 +66,9 @@ def menu():
 		menu()
 	elif wtd == "4":
 		import os
-		os.system('sh uninstall.sh')
+		os.system('sh src/uninstall.sh')
 	elif wtd == "5":
-		os.system('python3 main.py')
+		language()
 	elif wtd == "0":
 		print("")
 	else:
