@@ -27,6 +27,12 @@
 ![](src/assets/demo-dm-ru.png)
 
 
+
+#### Language selection menu / Меню выбора языка
+
+![](src/assets/demo-lang.png)
+
+
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
 
 ###### **Ananazz wallpapers by [Sergo](https://vk.com/s.sm1rn0f)**

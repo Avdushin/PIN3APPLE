@@ -3,7 +3,7 @@ echo -e "\e[0;92mUpdating..."
 sudo eopkg up -y
 clear
 sudo apt-get update -y
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 clear
 sudo pacman -Suy
 sudo pacman -S python-pip

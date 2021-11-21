@@ -24,7 +24,7 @@ myos = platform.platform()
 
 #  languages
 def language():
-	print("\n 1)РУССКИЙ \n\n 2)English\n\n 5)Назад \n\n 0)[red b]Выход\n\n")
+	print("\n 1) 🇷🇺 РУССКИЙ \n\n 2) 🇬🇧 English \n\n 5) Назад \n\n 0) [red b]Выход\n\n")
 	
 	lang = input(" Выберите язык/Choose language: ")
 
@@ -49,8 +49,8 @@ def info():
 # главное меню
 def menu():
 	import os
-	print("\n [b cyan]1)[yellow] ДИСТРИБУТИВЫ [b cyan]2) [yellow]МОЯ СИСТЕМА")
-	print("\n [b cyan]3)[yellow] Мануал       [b cyan]4) [yellow]Удалить конфигурацию[cyan]\n\n 5) [yellow]Язык [cyan]        0) [red]Выход \n")
+	print("\n [b cyan]1)[yellow b] ДИСТРИБУТИВЫ [b cyan]2) [yellow b]МОЯ СИСТЕМА")
+	print("\n [b cyan]3)[yellow b] Мануал       [b cyan]4) [yellow b]Удалить конфигурацию[cyan]\n\n 5) [yellow b]Язык [cyan]        0) [red]Выход \n")
 	wtd = input(" Выберите действие: ")
 	print("")
 
@@ -81,7 +81,9 @@ def distros():
 	dist = input(" Выберите ваш дистрибутив: ")
 	# логика установки
 	if dist == "1":
-		os.system('sh src/distros/Ubuntu/ubuntu.sh') 
+		print("\n[red b] Поддержка Ubuntu приостановлена...")
+		distros()
+		# os.system('sh src/distros/Ubuntu/ubuntu.sh')
 	elif dist == "2":
 		os.system('sh src/distros/Solus/solus.sh')
 	elif dist == "3":

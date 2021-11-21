@@ -24,7 +24,7 @@ myos = platform.platform()
 
 #  languages
 def language():
-	print("\n 1)РУССКИЙ \n\n 2)English\n\n 5)Back \n\n 0)[red b]Quit\n\n")
+	print("\n 1) 🇷🇺 РУССКИЙ \n\n 2) 🇬🇧 English \n\n 5) Back\n\n 0) [red b]Quit\n\n")
 	
 	lang = input(" Выберите язык/Choose language: ")
 
@@ -82,7 +82,9 @@ def distros():
 	dist = input(" Choose your distro: ")
 	# Install logic
 	if dist == "1":
-		os.system('sh src/distros/Ubuntu/ubuntu.sh') 
+		print('\n[red b]Ubuntu support has been suspended...')
+		distros()
+		# os.system('sh src/distros/Ubuntu/ubuntu.sh')
 	elif dist == "2":
 		os.system('sh src/distros/Solus/solus.sh')
 	elif dist == "3":

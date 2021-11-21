@@ -2,7 +2,8 @@
 sudo apt-get update -y
 clear
 echo -e "\e[0;92mUbuntu script starting..."
-sudo apt-get install i3 i3blocks i3status i3-gaps i3lock polybar kitty krita fish ack vim bottom neofetch flameshot variety feh rofi discord steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fontawesome-fonts -y
+sudo apt-get install i3 i3blocks i3status i3lock polybar kitty krita fish ack vim neofetch flameshot variety feh rofi steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fonts-font-awesome -y
+sudo snap install bottom discord
 sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files
@@ -12,7 +13,7 @@ sudo cp src/distros/Ubuntu/config ~/.config/i3/
 sudo cp -r src/polybar/ ~/.config/
 sudo cp -r src/kitty/ ~/.config/
 sudo flatpak install flathub com.rafaelmardojai.Blanket -y
-sudo cp -r src/dots/.bashrc ~/
+#sudo cp -r src/dots/.bashrc ~/
 sudo chsh -s /usr/bin/fish
 chsh -s /usr/bin/fish
 sudo cp -r src/assets/walls/ ~/
