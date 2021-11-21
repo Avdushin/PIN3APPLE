@@ -76,7 +76,7 @@ def menu():
 # дистрибутивы
 def distros():
 	import os
-	print("\n [b cyan]1) [#DF5B2C]Ubuntu  [b cyan]2) [#2C67DF]Solus")
+	print("\n [b cyan]1) [#808080]Ubuntu  [b cyan]2) [#2C67DF]Solus")
 	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Назад    [b cyan] 0)[b red] Выход\n")
 	dist = input(" Выберите ваш дистрибутив: ")
 	# логика установки

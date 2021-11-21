@@ -77,7 +77,7 @@ def menu():
 # distros 
 def distros():
 	import os
-	print("\n [b cyan]1) [#DF5B2C]Ubuntu  [b cyan]2) [#2C67DF]Solus")
+	print("\n [b cyan]1) [#808080]Ubuntu  [b cyan]2) [#2C67DF]Solus")
 	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Back    [b cyan] 0)[b red] Quit\n")
 	dist = input(" Choose your distro: ")
 	# Install logic
