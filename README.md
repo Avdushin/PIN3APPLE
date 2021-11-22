@@ -10,7 +10,7 @@
 
 ##### MAIN MENU
 
-![](src/assets/demo-gm.png)
+![](src/assets/demo-gm-3.5.png)
 
 ##### DOSTRO MENU
 
@@ -20,7 +20,7 @@
 
 ##### ГЛАВНОЕ МЕНЮ
 
-![](src/assets/demo-gm-ru.png)
+![](src/assets/demo-gm-ru-3.5.png)
 
 ##### МЕНЮ ДИСТРИБУТИВОВ
 
