@@ -21,7 +21,7 @@ print(f"[yellow]{pine}{apple}")
 
 #  languages
 def language():
-	print("\n 1)РУССКИЙ \n\n 2)English\n\n 5)Назад \n\n 0)[red b]Выход\n\n")
+	print("\n 1) 🇷🇺 РУССКИЙ \n\n 2) 🇬🇧 English \n\n 5) Назад \n\n 0) [red b]Выход\n\n")
 	
 	lang = input(" Выберите язык/Choose language: ")
 
@@ -51,7 +51,7 @@ def uninst_choose():
 	print("  3) [b]Manjaro 4) Fedora\n")
 	print("  5) [yellow b]Мануал  [cyan b]7)[green b] Установка\n")
 	print("  8)[yellow] Language [cyan b] 0) [red b]Выход\n")
-	comand = input("Выберите ваш дистрибутив: ")
+	comand = input("  Выберите ваш дистрибутив: ")
 
 	if comand == "1":
 		rmquest = input("Вы уверены что хотите удалить конфиг для Solus? [y/n]: ")
@@ -120,7 +120,7 @@ def uninst_choose():
 	elif comand == "8":
 		language()
 	elif comand == "0":
-		print("[red]Выход")
+		print("  [red]Выход")
 	else:
 	  	uninst_choose()
 

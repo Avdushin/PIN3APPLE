@@ -8,7 +8,7 @@ from rich import print
 from pyfiglet import figlet_format
 from ver import ver
 
-import pyfiglet, platform, os, sys
+import pyfiglet, webbrowser, platform, os, sys
 
 os.system('clear')
 
@@ -42,7 +42,9 @@ def language():
 
 # информация
 def info():
-	 print("\n[yellow b]Как это работает?\nВыберите ваш дистрибутив, и дождитесь окончания установки.\n\n[white]ИНСТРУКЦИЯ:\n[#46C959][[#CE270B]РУС[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
+	man = "https://telegra.ph/PN3APPLE-RUS-INFO-10-23"
+	webbrowser.open(man, new=2)
+	print("[green b]  Документация открыта в браузере!")
 
 """ МЕНЮ """
 
@@ -50,7 +52,7 @@ def info():
 def menu():
 	import os
 	print("\n [b cyan]1)[yellow b] ДИСТРИБУТИВЫ [b cyan]2) [yellow b]МОЯ СИСТЕМА")
-	print("\n [b cyan]3)[yellow b] Мануал       [b cyan]4) [yellow b]Удалить конфигурацию[cyan]\n\n 5) [yellow b]Язык [cyan]        0) [red]Выход \n")
+	print("\n [b cyan]3)[yellow b] Мануал       [b cyan]4) [yellow b]ДЕИНСТАЛЛЯТОР[cyan]\n\n 5) [yellow b]Язык [cyan]        0) [red]Выход \n")
 	wtd = input(" Выберите действие: ")
 	print("")
 
@@ -58,7 +60,7 @@ def menu():
 	if wtd == "1":
 		distros()
 	elif wtd == "2":
-		print(f'Ваша система {myos}')
+		print(f' Ваша система {myos}')
 		menu()
 	elif wtd == "3":
 		info()

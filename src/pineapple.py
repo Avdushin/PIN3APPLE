@@ -8,7 +8,7 @@ from rich import print
 from pyfiglet import figlet_format
 from ver import ver
 
-import pyfiglet, platform, os, sys
+import pyfiglet, webbrowser, platform, os, sys
 
 os.system('clear')
 
@@ -40,10 +40,11 @@ def language():
 	else:
 		language()
 
-
 # info
 def info():
-	 print("\n[yellow b]HOW IT WORKS?\nCHOOSE YOUR DISTRO, WAIT SOME MINUTES AND RELAX!\n\n[white]INSTRUCTION:\n[#46C959][[#CE270B]RUS[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-RUS-INFO-10-23\n[#46C959][[#CE270B]ENG[/#CE270B]][/#46C959] - [green]https://telegra.ph/PN3APPLE-ENG-INFO-10-23\n")
+	man = "https://telegra.ph/PN3APPLE-ENG-INFO-10-23"
+	webbrowser.open(man, new=2)
+	print("[green b]  The documentation was opened in a browser!")
 
 """ MENUS """
 
@@ -59,7 +60,7 @@ def menu():
 	if wtd == "1":
 		distros()
 	elif wtd == "2":
-		print(f'Your system is {myos}')
+		print(f' Your system is {myos}')
 		menu()
 	elif wtd == "3":
 		info()
