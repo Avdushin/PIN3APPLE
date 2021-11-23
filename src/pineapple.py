@@ -75,16 +75,31 @@ def menu():
 	else:
 		menu()
 
-# distros 
+"""  DISTROS  """
+
+# ubuntu check
+def ubuntuset():
+	# print("[yellow b]To install Ubuntu I3 you need to use Ubuntu 18.04.6\n\n[white]Your system is:\n")
+	# os.system('lsb_release -a')
+	agree = input('\n\nAre you sure you want to install the I3 config for Ubuntu? [y/n]: ')
+	if agree == "y":
+		os.system('sh src/distros/Ubuntu/ubuntu.sh')
+	elif agree == "Y":
+		os.system('sh src/distros/Ubuntu/ubuntu.sh')
+	else:
+		distros()
+
+
 def distros():
 	import os
-	print("\n [b cyan]1) [#808080]Ubuntu  [b cyan]2) [#2C67DF]Solus")
-	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Back    [b cyan] 0)[b red] Quit\n")
+	print("\n [b cyan]1) [#DF5B2C]Ubuntu[red b](*BETTA)  [b cyan]2) [#2C67DF]Solus")
+	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]        4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Back    [b cyan]        0)[b red] Quit\n")
 	dist = input(" Choose your distro: ")
 	# Install logic
 	if dist == "1":
-		print('\n[red b]Ubuntu support has been suspended...')
-		distros()
+		print('\n[red b]Ubuntu support has been suspended...\n\n')
+		ubuntuset()
+		# distros()
 		# os.system('sh src/distros/Ubuntu/ubuntu.sh')
 	elif dist == "2":
 		os.system('sh src/distros/Solus/solus.sh')

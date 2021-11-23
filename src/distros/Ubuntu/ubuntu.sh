@@ -2,8 +2,6 @@
 sudo apt-get update -y
 clear
 echo -e "\e[0;92mUbuntu script starting..."
-sudo apt-get install i3 i3blocks i3status i3lock polybar kitty krita ack vim neofetch flameshot variety feh rofi steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fonts-font-awesome -y
-sudo snap install bottom discord
 sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files
@@ -20,6 +18,9 @@ sudo cp -r src/assets/walls/ ~/
 sudo cp -r src/assets/Themes/Solarized-Dark-Blue src/assets/Themes/Solarized-Dark-Cyan /usr/share/themes/
 sudo cp -r src/assets/icons/Tela-blue/ src/assets/icons/Tela-blue-dark/ /usr/share/icons/
 sudo cp -r src/dots/.fonts ~/
+echo -e "\e[0;1;33mInstalling apps..."
+sudo apt-get install i3 i3blocks i3status i3lock polybar kitty krita ack vim neofetch flameshot variety feh rofi steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fonts-font-awesome -y
+sudo snap install bottom discord
 echo -e "\e[0;92mDONE!"
 echo -e "\e[0;91m!\e[0;1;33mYour system will be \e[0;91mREBOOT!"
 sleep 5
