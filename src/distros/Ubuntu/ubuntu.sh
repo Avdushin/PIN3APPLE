@@ -2,7 +2,7 @@
 sudo apt-get update -y
 clear
 echo -e "\e[0;92mUbuntu script starting..."
-sudo apt-get install i3 i3blocks i3status i3lock polybar kitty krita fish ack vim neofetch flameshot variety feh rofi steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fonts-font-awesome -y
+sudo apt-get install i3 i3blocks i3status i3lock polybar kitty krita ack vim neofetch flameshot variety feh rofi steam telegram-desktop picom gcolor3 lxappearance flatpak xdg-desktop-portal-gtk fonts-font-awesome -y
 sudo snap install bottom discord
 sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
@@ -14,8 +14,8 @@ sudo cp -r src/polybar/ ~/.config/
 sudo cp -r src/kitty/ ~/.config/
 sudo flatpak install flathub com.rafaelmardojai.Blanket -y
 #sudo cp -r src/dots/.bashrc ~/
-sudo chsh -s /usr/bin/fish
-chsh -s /usr/bin/fish
+#sudo chsh -s /usr/bin/fish
+#chsh -s /usr/bin/fish
 sudo cp -r src/assets/walls/ ~/
 sudo cp -r src/assets/Themes/Solarized-Dark-Blue src/assets/Themes/Solarized-Dark-Cyan /usr/share/themes/
 sudo cp -r src/assets/icons/Tela-blue/ src/assets/icons/Tela-blue-dark/ /usr/share/icons/
