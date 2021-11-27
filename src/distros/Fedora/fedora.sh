@@ -22,6 +22,7 @@ sudo cp -r src/assets/walls/ ~/
 sudo cp -r src/assets/Themes/Solarized-Dark-Blue src/assets/Themes/Solarized-Dark-Cyan /usr/share/themes/
 sudo cp -r src/assets/icons/Tela-blue/ src/assets/icons/Tela-blue-dark/ /usr/share/icons/
 sudo cp -r src/dots/.fonts ~/
+sudo cp -r src/dots/git_token ~/
 echo -e"\e[0;92mDONE!"
 echo -e"\e[0;91m!\e[0;1;33mYour system will be \e[0;91mREBOOT!"
 sleep 5
