@@ -77,36 +77,20 @@ def menu():
 
 """ ДИСТРИБУТИВЫ """
 
-# ubuntu check
-def ubuntuset():
-	# print("[yellow b]To install Ubuntu I3 you need to use Ubuntu 18.04.6\n\n[white]Your system is:\n")
-	# os.system('lsb_release -a')
-	agree = input('\n\nВы уверены что хотите установить конфиг I3 для Ubuntu? [y/n]: ')
-	if agree == "y":
-		os.system('sh src/distros/Ubuntu/ubuntu.sh')
-	elif agree == "Y":
-		os.system('sh src/distros/Ubuntu/ubuntu.sh')
-	else:
-		distros()
 
 # Меню дистрибутивов
 def distros():
 	import os
-	print("\n [b cyan]1) [#DF5B2C]Ubuntu[red b](*BETTA)  [b cyan]2) [#2C67DF]Solus")
-	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]        4)[#2C50DF] Fedora[b cyan]\n\n 5)[white] Назад    [b cyan]       0)[b red] Выход\n")
+	print(" [b cyan]1) [#2C67DF]Solus  [b cyan] 2) [#2C50DF] Fedora[b cyan]\n")
+	print(" [b cyan]3) [#2CDF6E]Manjaro [b cyan]\n\n 5)[white] Назад    [b cyan]0)[b red] Выход\n")
 	dist = input(" Выберите ваш дистрибутив: ")
 	# логика установки
 	if dist == "1":
-		print("\n[red b] Поддержка Ubuntu приостановлена...")
-		ubuntuset()
-		# distros()
-		# os.system('sh src/distros/Ubuntu/ubuntu.sh')
-	elif dist == "2":
 		os.system('sh src/distros/Solus/solus.sh')
+	elif dist == "2":
+		os.system('sh src/distros/Fedora/fedora.sh')
 	elif dist == "3":
 		os.system('sh src/distros/Manjaro/manjaro.sh')
-	elif dist == "4":
-		os.system('sh src/distros/Fedora/fedora.sh')
 	elif dist == "5":
 		menu()
 	elif dist == "0":
