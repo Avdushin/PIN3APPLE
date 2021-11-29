@@ -47,8 +47,8 @@ def progress():
 
 
 def uninst_choose():
-	print("\n  1) [b]Solus   2) Ubuntu\n")
-	print("  3) [b]Manjaro 4) Fedora\n")
+	print("\n  1) [b]Solus   2) Fedora\n")
+	print("  3) [b]Manjaro\n")
 	print("  5) [yellow b]Мануал  [cyan b]7)[green b] Установка\n")
 	print("  8)[yellow] Language [cyan b] 0) [red b]Выход\n")
 	comand = input("  Выберите ваш дистрибутив: ")
@@ -69,14 +69,14 @@ def uninst_choose():
 			pass
 	
 	if comand == "2":
-		rmquest = input("Вы уверены что хотите удалить конфиг для Ubuntu? [y/n]: ")
+		rmquest = input("Вы уверены что хотите удалить конфиг для Fedora? [y/n]: ")
 		if rmquest == "y":
-			os.system('sh src/distros/Ubuntu/uninst.sh')
+			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
 			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
 		elif rmquest == "Y":
-			os.system('sh src/distros/Ubuntu/uninst.sh')
+			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
 			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')
@@ -92,21 +92,6 @@ def uninst_choose():
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh src/distros/Manjaro/uninst.sh')
-			progress()
-			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
-			os.system('reboot')
-		else:
-			pass
-
-	if comand == "4":
-		rmquest = input("Вы уверены что хотите удалить конфиг для Fedora? [y/n]: ")
-		if rmquest == "y":
-			os.system('sh src/distros/Fedora/uninst.sh')
-			progress()
-			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
-			os.system('reboot')
-		elif rmquest == "Y":
-			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
 			print("[red b]!!! ПЕРЕЗАГРУЗКА !!!")
 			os.system('reboot')

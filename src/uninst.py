@@ -46,8 +46,8 @@ def progress():
 
 
 def uninst_choose():
-	print("\n  1) [b]Solus   2) Ubuntu\n")
-	print("  3) [b]Manjaro 4) Fedora\n")
+	print("\n  1) [b]Solus   2) Fedora\n")
+	print("  3) [b]Manjaro\n")
 	print("  5) [yellow b]Info    [cyan b]7)[green b] Install\n")
 	print("  [cyan b]8)[yellow] Язык [cyan b]0) [red b]Exit\n")
 	comand = input("  Choose your distro: ")
@@ -68,14 +68,14 @@ def uninst_choose():
 			pass
 	
 	if comand == "2":
-		rmquest = input("Are you sure you want to remove the Ubuntu config? [y/n]: ")
+		rmquest = input("Are you sure you want to remove the Fedora config? [y/n]: ")
 		if rmquest == "y":
-			os.system('sh src/distros/Ubuntu/uninst.sh')
+			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
 			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
 		elif rmquest == "Y":
-			os.system('sh src/distros/Ubuntu/uninst.sh')
+			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
 			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
@@ -91,21 +91,6 @@ def uninst_choose():
 			os.system('reboot')
 		elif rmquest == "Y":
 			os.system('sh src/distros/Manjaro/uninst.sh')
-			progress()
-			print("[red b]!!!Reboot!!!")
-			os.system('reboot')
-		else:
-			pass
-
-	if comand == "4":
-		rmquest = input("Are you sure you want to remove the Fedora config? [y/n]: ")
-		if rmquest == "y":
-			os.system('sh src/distros/Fedora/uninst.sh')
-			progress()
-			print("[red b]!!!Reboot!!!")
-			os.system('reboot')
-		elif rmquest == "Y":
-			os.system('sh src/distros/Fedora/uninst.sh')
 			progress()
 			print("[red b]!!!Reboot!!!")
 			os.system('reboot')
