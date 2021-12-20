@@ -138,7 +138,7 @@ font-4 = "coins:style=Regular:size=8;0"
 # РАСПОЛОЖЕНИЕ МОДУЛЕЙ
 
 modules-left = i3 xwindow  
-modules-center = 
+modules-center =
 modules-right =  cpu2 memory3 volume crypto date2 popup-calendar xkeyboard2 uptime  variety trash wireless-network powermenu
 
 separator = 
@@ -1343,7 +1343,7 @@ type = custom/script
 interval = 1800
 format-prefix = "  "
 format = <label>
-exec = ~/.config/polybar/sub.py
+exec = ~/.config/polybar/scripts/sub.py
 
 ; power menu
 [module/powermenu]
