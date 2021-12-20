@@ -18,8 +18,8 @@ margin-bottom = 0
 
 [colors]
 ; Nord theme ============
-;background = #2F343F
-;foreground = #f3f4f5
+background = #2F343F
+foreground = #f3f4f5
 alert = #d08770
 volume-min = #a3be8c
 volume-med = #ebcb8b
@@ -27,8 +27,8 @@ volume-max = #bf616a
 ; =======================
 
 ; Solarized Dark =======
-background = #073642
-foreground = #f3f4f5
+;background = #073642
+;foreground = #f3f4f5
 ; ======================
 
 ; Solarized lighter =======
@@ -111,7 +111,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 
-radius = 10
+radius = 15
 line-size = 2
 line-color = #000000
 
@@ -139,7 +139,7 @@ font-4 = "coins:style=Regular:size=8;0"
 
 modules-left = i3 xwindow  
 modules-center = 
-modules-right =  cpu2 memory3 volume date xkeyboard2 uptime variety trash wireless-network 
+modules-right =  cpu2 memory3 volume crypto date2 popup-calendar xkeyboard2 uptime  variety trash wireless-network powermenu
 
 separator = 
 
@@ -318,83 +318,26 @@ format-background = ${colors.background}
 format-underline =
 
 ################################################################################
-################################################################################
-############                       MODULE BSPWM                     ############
-################################################################################
-################################################################################
-
-[module/bspwm]
-type = internal/bspwm
-
-enable-click = true
-enable-scroll = true
-reverse-scroll = true
-pin-workspaces = true
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = " "
-
-
-format = <label-state> <label-mode>
-
-label-focused = %icon%
-label-focused-background = ${colors.background}
-label-focused-underline= #6790eb
-label-focused-padding = 4
-label-focused-foreground = #6790EB
-
-label-occupied = %icon%
-label-occupied-padding = 2
-label-occupied-background = ${colors.background}
-label-occupied-foreground = #6790EB
-
-label-urgent = %icon%
-label-urgent-padding = 2
-
-label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
-label-empty-padding = 2
-label-empty-background = ${colors.background}
-label-monocle = "  "
-label-monocle-foreground = ${colors.foreground}
-label-tiled = "  "
-label-tiled-foreground = ${colors.foreground}
-label-fullscreen = "  "
-label-fullscreen-foreground = ${colors.foreground}
-label-floating = "  "
-label-floating-foreground = ${colors.foreground}
-label-pseudotiled = "  "
-label-pseudotiled-foreground = ${colors.foreground}
-label-locked = "  "
-label-locked-foreground = ${colors.foreground}
-label-sticky = "  "
-label-sticky-foreground = ${colors.foreground}
-label-private =  "     "
-label-private-foreground = ${colors.foreground}
-
-; Separator in between workspaces
-;label-separator = |
-;label-separator-padding = 10
-;label-separator-foreground = #ffb52a
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-
-
-################################################################################
 ###############################################################################
 ############                       MODULES A-Z                      ############
 ################################################################################
 ################################################################################
+
+[module/apps]
+type = custom/text
+
+
+[module/browser]
+inherit = module/apps
+content = 
+content-foreground = 
+content-baskground = 
+format-foreground = 
+format-background = 
+format-prefix-foreground =
+click-left = firefox &
+click-right = chromium &
+
 
 [module/arch-updates]
 type = custom/script
@@ -643,6 +586,25 @@ format-underline = #6C6565
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label =   %time% |  %date% 
+
+[module/date2]
+;https://github.com/jaagr/polybar/wiki/Module:-date
+type = internal/date
+; Seconds to sleep between updates
+interval = 1
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = " %d-%m-%Y "
+date-alt = " %d-%m-%Y"
+time = %l:%M:%S %p
+#time = %H:%M:%S
+time-alt = %H:%M:%S
+format-prefix = " "
+format-prefix-foreground = #c1941a
+format-underline = #6C6565
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+label =   %time%
 
 #################################################################
 
@@ -1284,6 +1246,15 @@ format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
 
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/polybar/scripts/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-underline = #6C6565
+
 #################################################################################
 
 [module/wired-network]
@@ -1360,6 +1331,65 @@ ramp-signal-7 = 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+[module/network-networkmanager]
+type = custom/script
+exec = ~/.config/polybar/scripts/network-networkmanager.sh
+tail = true
+
+################################################################################
+
+[module/yt]
+type = custom/script
+interval = 1800
+format-prefix = "  "
+format = <label>
+exec = ~/.config/polybar/sub.py
+
+; power menu
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+
+menu-0-0 = " Reboot |"
+menu-0-0-exec = menu-open-1
+menu-0-1 = " Shutdown "
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = " Back |"
+menu-1-0-exec = menu-open-0
+menu-1-1 = " Reboot "
+menu-1-1-exec = systemctl reboot
+
+menu-2-0 = " Shutdown |"
+menu-2-0-exec = systemctl poweroff
+menu-2-1 = " Back "
+menu-2-1-exec = menu-open-0
+
+format = <label-toggle><menu>
+
+label-open = 
+label-open-foreground = 
+label-open-padding = 1
+label-close = 
+label-close-foreground = 
+label-close-padding = 1
+; 
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+; Optional item separator
+; Default: none
+;label-separator = " | "
+;label-separator-foreground = 
+;label-separator-background = 
+
+;;label-open-foreground = 
+;;label-close-foreground = 
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 ################################################################################
 
 [module/xbacklight]
@@ -1423,6 +1453,16 @@ label-indicator-underline = ${colors.foreground}
 
 ################################################################################
 
+[module/info-hackspeed]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-hackspeed.sh
+tail = true
+format-prefix-underline = #ffffff
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+################################################################################
+
 [module/xwindow]
 ;https://github.com/jaagr/polybar/wiki/Module:-xwindow
 type = internal/xwindow
@@ -1431,7 +1471,7 @@ type = internal/xwindow
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 50
+label-maxlen = 150
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
