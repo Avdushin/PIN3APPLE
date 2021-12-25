@@ -44,7 +44,8 @@ def language():
 def info():
 	man = "https://telegra.ph/PN3APPLE-ENG-INFO-10-23"
 	webbrowser.open(man, new=2)
-	print("[green b]  The documentation was opened in a browser!")
+	print("[green b]  The documentation was opened in a browser!\n")
+	print("[green b]  Put [red b]ENTER[green b] to show General menu.")
 
 """ MENUS """
 

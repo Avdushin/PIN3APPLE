@@ -44,7 +44,8 @@ def language():
 def info():
 	man = "https://telegra.ph/PN3APPLE-RUS-INFO-10-23"
 	webbrowser.open(man, new=2)
-	print("[green b]  Документация открыта в браузере!")
+	print("[green b]  Документация открыта в браузере!\n")
+	print("[green b]  Нажмите[red b] ENTER[green b] чтобы открыть главное меню.")
 
 """ МЕНЮ """
 
