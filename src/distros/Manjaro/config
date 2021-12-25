@@ -31,7 +31,7 @@ exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant -option grp:a
 exec --no-startup-id variety
 
 # feh обои рабочего стола
-#exec --no-startup-id feh --bg-fill ~/walls/manjaro.png &
+#exec --no-startup-id feh --bg-fill --randomize ~/walls/* &
 
 #xkill
 bindsym --release $mod+Escape exec xkill
@@ -45,15 +45,15 @@ bindsym --release $mod+Escape exec xkill
 # Старт программ
 
 # sublime_text
-bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text 
+bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text;workspace 2
 #bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
 #bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
 
 # blanket
 bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket 
 
-# chromium
-bindsym $mod+alt+c exec flatpak run org.chromium.Chromium
+# google-chrome
+bindsym $mod+shift+b exec google-chrome-stable;workspace 3
 
 # gcolor
 bindsym $mod+g exec gcolor3;floating enable
@@ -213,10 +213,11 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+bindsym $mod+Mod1+l exec betterlockscreen --lock
 
 # ArcoLinux Logout
-bindsym $mod+Shift+e exec --no-startup-id arcolinux-logout
-bindsym control+$mod1+X exec --no-startup-id arcolinux-logout
+#bindsym $mod+Shift+e exec --no-startup-id arcolinux-logout
+#bindsym control+$mod1+X exec --no-startup-id arcolinux-logout
 
 
 #####################################################################################################################
@@ -392,14 +393,14 @@ font pango:Noto Mono Regular 13
 
 # Workspace 1 browser related
 #assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
-#assign [class="Chromium|Google-chrome"]                                             → 1
+#assign [class="Chromium|"]                                             → 1
 
 # Workspace 2 text editor related
 #assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
-#assign [class="Xed|xed|Brackets|Sublime_text|Code|Geany"]                                   → 2
+assign [class="Xed|xed|Brackets|Sublime_text|sublime_text|Code|Geany"]                                   → 2
 
 # Workspace 3 Firefox
-assign [class="firefox"]                                                           → 3
+assign [class="firefox|Google-chrome"]                                                           → 3
 
 # Workspace 4 freetube
 #assign [class="freetube"]                                                               → 4
@@ -411,10 +412,10 @@ assign [class="firefox"]                                                        
 #assign [class="Meld"]                                                               → 5
 
 # Workspace 6 all video related software
-#assign [class="Vlc|vlc"]                                                            → 6
+assign [class="Vlc|vlc|discord"]                                                            → 6
 
 # Workspace 7 virtual machines and settings
-assign [class="Telegram|Discord"]						    → 7
+assign [class="Telegram|Discord"]                           → 7
 
 # Workspace 8 file managers
 #assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
@@ -641,11 +642,11 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 
 # Border control
 hide_edge_borders both
-bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
+#bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 #changing border style
 #super+t in arcolinux is starting terminal
-#bindsym $mod+t border normal
+bindsym $mod+Mod1+t border normal
 #bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
@@ -678,11 +679,16 @@ popup_during_fullscreen smart
 # want it
 
 
-for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
-#smart_gaps on
-#smart_borders on
+##### i3-gaps ##############
+for_window [class=".*"] border pixel 0
+gaps inner 10
+gaps outer 1
+#gaps horizontal 2
+
+################# i3-radius #######################
+smart_borders on
+smart_borders no_gaps
+#border_radius 20px
 
 #####################################################################################################################
 #################                          i3 gaps change                                           #################
@@ -735,10 +741,10 @@ mode "$mode_gaps_outer" {
 #####################################################################################################################
 
 #if you want transparency on non-focused windows, ...
-exec_always --no-startup-id picom
+#exec_always --no-startup-id picom
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
-bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
+#bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
 #####################################################################################################################
 #####################################################################################################################
@@ -847,4 +853,3 @@ bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 #####################################################################################################################
 #####################################################################################################################
 #####################################################################################################################
-

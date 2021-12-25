@@ -75,9 +75,39 @@ def menu():
 	else:
 		menu()
 
+""" Majaro Alt install """
+
+def alt_1():
+	alt_inst = input(" Do you want to install betterlockscreen? [Y/n]:")
+	if alt_inst == "Y":
+		os.system('yay -S betterlockscreen')
+	elif alt_inst == "y":
+		os.system('yay -S betterlockscreen')
+	elif alt_inst == "N":
+		alt_2()
+	elif alt_inst == "n":
+		alt_2()
+	else:
+		alt_1()
+
+def alt_2():
+	alt_inst = input(" Do you want to install picom-jonaburg-git (For border corners)? [Y/n]:")
+	if alt_inst == "Y":
+		os.system('yay -S picom-jonaburg-git')
+		os.system('sh src/distros/Manjaro/manjaro.sh')
+	elif alt_inst == "y":
+		os.system('yay -S picom-jonaburg-git')
+		os.system('sh src/distros/Manjaro/manjaro.sh')
+	elif alt_inst == "N":
+		print('\n [green b]Installing Manjaro I3 config...\n')
+		os.system('sh src/distros/Manjaro/manjaro.sh')
+	elif alt_inst == "n":
+		print('\n [green b]Installing Manjaro I3 config...\n')
+		os.system('sh src/distros/Manjaro/manjaro.sh')
+	else:
+		alt_2()
+
 """  DISTROS  """
-
-
 
 def distros():
 	import os
@@ -90,7 +120,10 @@ def distros():
 	elif dist == "2":
 		os.system('sh src/distros/Fedora/fedora.sh')
 	elif dist == "3":
-		os.system('sh src/distros/Manjaro/manjaro.sh')
+		print(" [green b]Installing AUR...")
+		os.system('sudo pacman -S yay')
+		alt_1()
+		alt_2()
 	elif dist == "5":
 		menu()
 	elif dist == "0":
