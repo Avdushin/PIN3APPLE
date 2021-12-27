@@ -125,8 +125,8 @@ border-color =
 padding-left = 5
 padding-right = 5
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
@@ -134,12 +134,14 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 font-4 = "coins:style=Regular:size=8;0"
+font-6 = "unicode-emoji:size=10;0"
 
 # РАСПОЛОЖЕНИЕ МОДУЛЕЙ
+;modules-left = i3 sep miro figma github vk youtube sep xwindow
 
-modules-left = i3 xwindow  
+modules-left = i3 sep xwindow
 modules-center =
-modules-right =  cpu2 memory3 volume crypto date2 popup-calendar xkeyboard2 uptime  variety trash wireless-network powermenu
+modules-right =  cpu2 memory3 volume5 crypto date xkeyboard2 uptime  variety trash wireless-network powermenu
 
 separator = 
 
@@ -278,9 +280,9 @@ label-mode-background = #FFBB00
 ;   %output%
 ; Default: %icon%  %name%
 ; focused = Active workspace on focused monitor
-label-focused = %icon% %name%
+label-focused = %icon% 
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = #c89148
 label-focused-underline = #6790eb
 label-focused-padding = 2
 
@@ -290,7 +292,7 @@ label-focused-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon% %name%
+label-unfocused = %icon%
 label-unfocused-padding = 2
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.foreground}
@@ -308,7 +310,7 @@ label-visible-padding = 2
 ;   %index%
 ; Default: %icon%  %name%
 ; urgent = Workspace with urgency hint set
-label-urgent = %icon% %name%
+label-urgent = %icon%
 label-urgent-background = ${self.label-focused-background}
 label-urgent-foreground = #db104e
 label-urgent-padding = 2
@@ -323,21 +325,83 @@ format-underline =
 ################################################################################
 ################################################################################
 
-[module/apps]
-type = custom/text
+; Links
 
-
-[module/browser]
-inherit = module/apps
-content = 
-content-foreground = 
-content-baskground = 
-format-foreground = 
+[module/miro]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = google-chrome-stable https://miro.com/app/board/uXjVOYswI1Q=/
 format-background = 
-format-prefix-foreground =
-click-left = firefox &
-click-right = chromium &
+format-underline = 
+;#c89148
 
+[module/github]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = google-chrome-stable https://github.com/
+format-background = 
+format-underline = 
+;#c89148
+
+[module/vk]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = google-chrome-stable https://vk.com/feed
+format-background = 
+format-underline = 
+;#c89148
+
+[module/youtube]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = google-chrome-stable https://youtube.com/
+format-background = 
+format-underline = 
+;#c89148
+
+[module/figma]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/links.sh
+format-prefix = ""
+format-prefix-padding-left = 0
+format-prefix-padding-right = 0
+format-prefix-foreground = ${colors.foreground}
+label-padding = 0
+label-foreground = ${colors.foreground}
+click-left = google-chrome-stable https://www.figma.com/files/
+format-background = 
+format-underline = 
+
+###############################################
 
 [module/arch-updates]
 type = custom/script
@@ -371,7 +435,7 @@ format-prefix-padding-right = 0
 format-prefix-foreground = ${colors.foreground}
 label-padding = 0
 label-foreground = ${colors.foreground}
-click-left = rm -rf ~/.local/share/Trash/files/* ;exec notify-send 'Kôš vyprázdnený'
+click-left = rm -rf ~/.local/share/Trash/files/* ;exec notify-send 'Корзина очищена'
 #click-right = pcmanfm -n ~/.local/share/Trash/files
 format-background = 
 format-underline = #FF7676
@@ -575,7 +639,7 @@ type = internal/date
 interval = 1
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %d-%m-%Y "
+date = " %a %d-%m-%Y "
 date-alt = " %d-%m-%Y"
 time = %l:%M:%S %p
 #time = %H:%M:%S
@@ -999,11 +1063,14 @@ format-underline = #62FF00
 [module/sep]
 ; alternative separator
 type = custom/text
-content = 
+content = |
+;content = 
 content-foreground = ${colors.foreground}
 content-background =  ${colors.background}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+format-underline =
+content-underline =
 
 ################################################################################
 
@@ -1205,6 +1272,47 @@ bar-volume-indicator = |
 bar-volume-fill = ─
 #bar-volume-fill-font = 2
 bar-volume-empty = ─
+#bar-volume-empty-font = 2
+#bar-volume-empty-foreground = ${colors.foreground-alt}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #40ad4b
+bar-volume-foreground-1 = #40ad4b
+bar-volume-foreground-2 = #40ad4b
+bar-volume-foreground-3 = #40ad4b
+bar-volume-foreground-4 = #40ad4b
+bar-volume-foreground-5 = #40ad4b
+bar-volume-foreground-6 = #40ad4b
+bar-volume-gradient = false
+#bar-volume-indicator = 
+bar-volume-indicator-font = 2
+#bar-volume-fill = 
+bar-volume-fill-font = 2
+#bar-volume-empty = 
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.background}
+format-muted-prefix = "  "
+format-muted-prefix-foreground = "#ff0000"
+format-muted-foreground = ${colors.foreground}
+format-muted-background = ${colors.background}
+
+[module/volume5]
+;https://github.com/jaagr/polybar/wiki/Module:-volume
+type = internal/volume
+format-volume = "<label-volume>  <bar-volume>"
+
+label-volume = ""
+label-volume-foreground = #40ad4b
+label-muted = muted
+
+#bar-volume-gradient = false
+bar-volume-indicator = ∣
+#bar-volume-indicator-font = 2
+bar-volume-fill = ∣
+#bar-volume-fill-font = 2
+bar-volume-empty = ∣
 #bar-volume-empty-font = 2
 #bar-volume-empty-foreground = ${colors.foreground-alt}
 
