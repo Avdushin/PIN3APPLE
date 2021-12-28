@@ -10,20 +10,31 @@ from ver import ver
 
 import pyfiglet, webbrowser, platform, os, sys
 
-os.system('clear')
+def clear():
+	os.system('clear')
 
 # logo
-prname = figlet_format(" PIN3APPLE")
-print(f"[yellow]{prname}")
-
-# ver
-print(f" [yellow]VERSION: {ver}")
+def logo():
+	prname = figlet_format(" PIN3APPLE")
+	print(f"[yellow]{prname}")
+	# ver
+	print(f" [yellow]VERSION: {ver}")
 
 # os
-myos = platform.platform()
+def myos():
+	clear()
+	logo()
+	myos = platform.platform()
+	print(f' Your system is {myos}')
+	if myos == "Enter":
+		menu()
+	else:
+		pass
 
 #  languages
 def language():
+	clear()
+	logo()
 	print("\n 1) 🇷🇺 РУССКИЙ \n\n 2) 🇬🇧 English \n\n 5) Back\n\n 0) [red b]Quit\n\n")
 	
 	lang = input(" Выберите язык/Choose language: ")
@@ -42,6 +53,8 @@ def language():
 
 # info
 def info():
+	clear()
+	logo()
 	man = "https://telegra.ph/PN3APPLE-ENG-INFO-10-23"
 	webbrowser.open(man, new=2)
 	print("[green b]  The documentation was opened in a browser!\n")
@@ -52,6 +65,8 @@ def info():
 # general menu
 def menu():
 	import os
+	clear()
+	logo()
 	print("\n [b cyan]1)[yellow] DISTROS [b cyan] 2) [yellow]MY OS")
 	print("\n [b cyan]3)[yellow] INFO    [b cyan] 4) [yellow]Uninstall[cyan]\n\n 5) [yellow]language [cyan]0) [red]Quit \n")
 	wtd = input(" Coose an action: ")
@@ -61,8 +76,9 @@ def menu():
 	if wtd == "1":
 		distros()
 	elif wtd == "2":
+		myos = platform.platform()
 		print(f' Your system is {myos}')
-		menu()
+		menuos()
 	elif wtd == "3":
 		info()
 		menu()
@@ -74,7 +90,38 @@ def menu():
 	elif wtd == "0":
 		print("")
 	else:
+		logo()
+		clear()
 		menu()
+
+# menu 0s
+def menuos():
+	import os
+	# logo()
+	print("\n [b cyan]1)[yellow] DISTROS [b cyan] 2) [yellow]MY OS")
+	print("\n [b cyan]3)[yellow] INFO    [b cyan] 4) [yellow]Uninstall[cyan]\n\n 5) [yellow]language [cyan]0) [red]Quit \n")
+	wtd = input(" Coose an action: ")
+	print("")
+
+	# choose logical
+	if wtd == "1":
+		distros()
+	elif wtd == "2":
+		myos = platform.platform()
+		print(f' Your system is {myos}')
+		menuos()
+	elif wtd == "3":
+		info()
+		menu()
+	elif wtd == "4":
+		import os
+		os.system('sh src/uninstall.sh')
+	elif wtd == "5":
+		language()
+	elif wtd == "0":
+		print("")
+	else:
+		menuos()
 
 """ Majaro Alt install """
 
@@ -112,6 +159,8 @@ def alt_2():
 
 def distros():
 	import os
+	clear()
+	logo()
 	print("\n [b cyan]1) [#2C67DF]Solus  [b cyan] 2) [#2C50DF] Fedora[b cyan]")
 	print("\n [b cyan]3) [#2CDF6E]Manjaro [b cyan]      \n\n 5)[white] Back    [b cyan]0)[b red] Quit\n")
 	dist = input(" Choose your distro: ")
@@ -131,4 +180,7 @@ def distros():
 		print("")
 	else:
 		distros()
+
+# calls
+logo()
 menu()

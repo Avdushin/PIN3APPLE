@@ -8,19 +8,22 @@ import pyfiglet, platform, time, os, sys
 from tqdm import tqdm
 from pyfiglet import figlet_format
 from rich import print
+from pineapple import clear, logo
 
 os.system("clear")
-
+clear()
+logo()
 # лого
-pine = figlet_format("PIN3APPLE")
-apple = figlet_format("UNINSTALLER")
-print(f"[yellow]{pine}{apple}")
+# pine = figlet_format("PIN3APPLE")
+# apple = figlet_format("UNINSTALLER")
+# print(f"[yellow]{pine}{apple}")
 
 
 # FUNCTIONS
 
 #  languages
 def language():
+	clear()
 	print("\n 1) 🇷🇺 РУССКИЙ \n\n 2) 🇬🇧 English \n\n 5) Назад \n\n 0) [red b]Выход\n\n")
 	
 	lang = input(" Выберите язык/Choose language: ")
@@ -100,6 +103,7 @@ def uninst_choose():
 	
 	elif comand == "5":
 		print("\n[yellow b]Choose youre distro to [red b]REMOVE [yellow b]config... \n")
+		uninst_choose()
 	elif comand == "7":
 			os.system('python3 src/pineapple-ru.py')
 	elif comand == "8":

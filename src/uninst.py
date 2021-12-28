@@ -99,6 +99,7 @@ def uninst_choose():
 	
 	elif comand == "5":
 		print("\n[yellow b]Choose youre distro to [red b]REMOVE [yellow b]config... \n")
+		uninst_choose()
 	elif comand == "7":
 			os.system('python3 src/pineapple.py')
 	elif comand == "8":

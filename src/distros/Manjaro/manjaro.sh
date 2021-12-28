@@ -2,7 +2,7 @@
 sudo pacman -Syu
 clear
 echo -e "\e[0;92mManjaro script starting..."
-sudo pacman -Syu i3 i3blocks i3status i3lock polybar kitty krita fish ack vim bottom neofetch flameshot variety feh rofi discord python-pip steam telegram-desktop gcolor3 lxappearance picom flatpak xdg-desktop-portal-gtk awesome-terminal-fonts -y 
+sudo pacman -Syu i3 i3blocks i3status i3lock polybar kitty krita fish ack vim bottom neofetch flameshot variety feh rofi discord python-pip steam telegram-desktop gcolor3 lxappearance picom flatpak xdg-desktop-portal-gtk awesome-terminal-fonts noto-fonts-emoji noto-fonts
 sudo mkdir -p ~/.appz
 sudo mkdir -p ~/.config/i3/
 sudo mkdir -p ~/.local/share/Trash/files

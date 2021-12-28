@@ -10,20 +10,21 @@ from ver import ver
 
 import pyfiglet, webbrowser, platform, os, sys
 
-os.system('clear')
+def clear():
+	os.system('clear')
 
-# лого
-prname = figlet_format(" PIN3APPLE")
-print(f"[yellow]{prname}")
+# logo
+def logo():
+	prname = figlet_format(" PIN3APPLE")
+	print(f"[yellow]{prname}")
+	# версия
+	print(f" [yellow]VERSION: {ver}")
 
-# версия
-print(f" [yellow]ВЕРСИЯ: {ver}")
-
-# ос
-myos = platform.platform()
 
 #  languages
 def language():
+	clear()
+	logo()
 	print("\n 1) 🇷🇺 РУССКИЙ \n\n 2) 🇬🇧 English \n\n 5) Назад \n\n 0) [red b]Выход\n\n")
 	
 	lang = input(" Выберите язык/Choose language: ")
@@ -52,6 +53,8 @@ def info():
 # главное меню
 def menu():
 	import os
+	clear()
+	logo()
 	print("\n [b cyan]1)[yellow b] ДИСТРИБУТИВЫ [b cyan]2) [yellow b]МОЯ СИСТЕМА")
 	print("\n [b cyan]3)[yellow b] Мануал       [b cyan]4) [yellow b]ДЕИНСТАЛЛЯТОР[cyan]\n\n 5) [yellow b]Язык [cyan]        0) [red]Выход \n")
 	wtd = input(" Выберите действие: ")
@@ -61,20 +64,51 @@ def menu():
 	if wtd == "1":
 		distros()
 	elif wtd == "2":
+		myos = platform.platform()
 		print(f' Ваша система {myos}')
-		menu()
+		menuos()
 	elif wtd == "3":
 		info()
 		menu()
 	elif wtd == "4":
-		import os
+		# import os
 		os.system('sh src/uninstallru.sh')
 	elif wtd == "5":
 		language()
 	elif wtd == "0":
 		print("")
 	else:
+		logo()
+		clear()
 		menu()
+
+# menu 0s
+def menuos():
+	import os
+	print("\n [b cyan]1)[yellow] DISTROS [b cyan] 2) [yellow]MY OS")
+	print("\n [b cyan]3)[yellow] INFO    [b cyan] 4) [yellow]Uninstall[cyan]\n\n 5) [yellow]language [cyan]0) [red]Quit \n")
+	wtd = input(" Coose an action: ")
+	print("")
+
+	# choose logical
+	if wtd == "1":
+		distros()
+	elif wtd == "2":
+		myos = platform.platform()
+		print(f' Your system is {myos}')
+		menuos()
+	elif wtd == "3":
+		info()
+		menu()
+	elif wtd == "4":
+		import os
+		os.system('sh src/uninstall.sh')
+	elif wtd == "5":
+		language()
+	elif wtd == "0":
+		print("")
+	else:
+		menuos()
 
 """ Majaro дополнительные программы """
 
@@ -114,7 +148,9 @@ def alt_2():
 # Меню дистрибутивов
 def distros():
 	import os
-	print(" [b cyan]1) [#2C67DF]Solus  [b cyan] 2) [#2C50DF] Fedora[b cyan]\n")
+	clear()
+	logo()
+	print("\n [b cyan]1) [#2C67DF]Solus  [b cyan] 2) [#2C50DF] Fedora[b cyan]\n")
 	print(" [b cyan]3) [#2CDF6E]Manjaro [b cyan]\n\n 5)[white] Назад    [b cyan]0)[b red] Выход\n")
 	dist = input(" Выберите ваш дистрибутив: ")
 	# логика установки
@@ -133,4 +169,7 @@ def distros():
 		print("")
 	else:
 		distros()
+
+# calls
+logo()
 menu()
