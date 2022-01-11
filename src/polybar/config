@@ -486,6 +486,12 @@ format-underline =
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-pacman.sh
 interval = 6
+format-prefix = " "
+;     
+format-prefix-foreground = #20a639
+format-background = 
+format-foreground = 
+format-underline = #6C6565
 
 [module/network-publicip]
 type = custom/script
