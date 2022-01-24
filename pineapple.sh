@@ -1,2 +1,2 @@
-clear
-python3 src/pineapple.py
+#!/bin/sh
+python3 src/main.py

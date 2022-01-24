@@ -10,27 +10,37 @@
 
 ##### MAIN MENU
 
-![](src/assets/demo-gm-3.5.png)
+![](src/assets/demo-gm.jpg)
 
 ##### DOSTRO MENU
 
-![](src/assets/demo-dm.png)
+![](src/assets/demo-dm.jpg)
+
+
+
+##### UNINSTALLER
+
+![](src/assets/uninstaller.jpg)
 
 #### [РУС] ДЕМО
 
 ##### ГЛАВНОЕ МЕНЮ
 
-![](src/assets/demo-gm-ru-3.5.png)
+![](src/assets/demo-gm-ru.jpg)
 
 ##### МЕНЮ ДИСТРИБУТИВОВ
 
-![](src/assets/demo-dm-ru.png)
+![](src/assets/demo-dm-ru.jpg)
 
 
+
+##### ДЕИНСТАЛЛЯТОР
+
+![](src/assets/uninstaller-ru.jpg)
 
 #### Language selection menu / Меню выбора языка
 
-![](src/assets/demo-lang.png)
+![](src/assets/demo-lang.jpg)
 
 
 ###### **2021 © [Avdushin](https://github.com/Avdushin)**
