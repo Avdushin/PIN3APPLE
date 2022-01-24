@@ -1,0 +1,3 @@
+src/__pycache__/
+src/polybar/scripts/isvpn.sh
+venv/
