@@ -1,5 +1,7 @@
 *.py linguist-vendored=false
 *.sh linguist-vendored=false
 *.md linguist-vendored=false
+*.css linguist-vendored=true
+*.scss linguist-vendored=true
 *.css   diff=py
-*.scss  diff=py
+*.scss   diff=py
