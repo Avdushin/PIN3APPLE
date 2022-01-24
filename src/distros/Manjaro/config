@@ -20,77 +20,8 @@
 # Print = PRINT key
 # Tab = TAB key
 
-#####################################################################################################################
-#################                                   GENERAL SETINGS                                 #################
-#####################################################################################################################
-
 # раскладка клавиатуры
 exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant -option grp:alt_shift_toggle 
-
-# variety обои рабочего стола
-exec --no-startup-id variety
-
-# feh обои рабочего стола
-#exec --no-startup-id feh --bg-fill --randomize ~/walls/* &
-
-#xkill
-bindsym --release $mod+Escape exec xkill
-
-
-#####################################################################################################################
-#################                          Запуск программ - сочитания клавиш                       #################
-#####################################################################################################################
-
-
-# Старт программ
-
-# sublime_text
-bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text;workspace 2
-#bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
-#bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
-
-# blanket
-bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket 
-
-# google-chrome
-bindsym $mod+shift+b exec google-chrome-stable;workspace 3
-
-# gcolor
-bindsym $mod+g exec gcolor3;floating enable
-
-# file manager 
-bindsym $mod+e exec thunar
-#bindsym $mod+e exec dolphin
-
-#bindsym $mod+e exec dolphin
-
-#bindsym $mod+e exec nautilus
-
-# noisetorch
-bindsym $mod+n exec ~/.local/bin/noisetorch 
-
-# discord
-bindsym $mod+shift+d exec discord 
-
-# freetube
-#bindsym $mod+y exec freetube 
-
-# gitkraken
-bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
-
-# terminal
-bindsym $mod+Return exec kitty -o background_opacity=0.8;focus
-#bindsym $mod+Return exec kitty;focus #default kitty
-
-# telegram 
-bindsym $mod+t exec --no-startup-id telegram-desktop
-
-#System monitor
-bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
-
-#catfish
-bindsym control+mod1+c exec --no-startup-id catfish;focus
-
 
 
 #####################################################################################################################
@@ -187,6 +118,7 @@ bindsym $mod+F2 exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -s
 
 # старт rofi 
 bindsym $mod+d  exec --no-startup-id rofi -show run -font "Noto Sans 13"
+bindsym $mod+space  exec --no-startup-id rofi -show run -font "Noto Sans 13"
 
 # старт rofi полноэкранный
 bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
@@ -196,15 +128,18 @@ bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto San
 #################                          how to exit, logoff, suspend, ...                        #################
 #####################################################################################################################
 
+# lock
+bindsym Mod1+l exec i3lock -n --color=#033E4D
+
 #Backup exit
 #Press ctrl+alt+x - check toolbar for next choices
 #bindsym control+mod1+X mode "$mode_system"
 bindsym $mod+X mode "$mode_system"
 
-set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
+set $mode_system System (l) lock, (r) reboot, (s) shutdown
 mode "$mode_system" {
-    bindsym k exec lock
-    bindsym l exec logout
+    #bindsym l exec i3lock -n --color=#0D3541
+    bindsym l exec i3lock -n --color=#033E4D
     bindsym r exec reboot
     bindsym s exec shutdown -h 0
 
@@ -212,13 +147,6 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-bindsym $mod+Mod1+l exec betterlockscreen --lock
-
-# ArcoLinux Logout
-#bindsym $mod+Shift+e exec --no-startup-id arcolinux-logout
-#bindsym control+$mod1+X exec --no-startup-id arcolinux-logout
-
 
 #####################################################################################################################
 #################                          reload changed configuration                             #################
@@ -229,7 +157,7 @@ bindsym $mod+Mod1+l exec betterlockscreen --lock
 bindsym $mod+Shift+r restart
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c exec reload
 
 
 
@@ -241,6 +169,8 @@ bindsym $mod+Shift+c reload
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
+
+
 
 #####################################################################################################################
 #################                          Moving around in i3                                      #################
@@ -276,6 +206,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+
 
 
 #####################################################################################################################
@@ -322,7 +254,7 @@ bindsym $mod+z layout tabbed
 
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym Mod1+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -382,7 +314,12 @@ mode "resize" {
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # choose your font
-font pango:Noto Mono Regular 13
+font pango:Lato 13
+#font pango:Noto Mono Regular 13
+
+
+
+
 
 #####################################################################################################################
 #################                          assign applications to workspaces                       #################
@@ -393,14 +330,15 @@ font pango:Noto Mono Regular 13
 
 # Workspace 1 browser related
 #assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 1
-#assign [class="Chromium|"]                                             → 1
+#assign [class="Chromium|Google-chrome"]                                             → 1
 
 # Workspace 2 text editor related
-#assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
-assign [class="Xed|xed|Brackets|Sublime_text|sublime_text|Code|Geany"]                                   → 2
+
+#assign [class="sublime_text"]       → 2
+assign [class="Xed|xed|Brackets|sublime_text|Sublime_text|Code|code|code-oss"]                                   → 2
 
 # Workspace 3 Firefox
-assign [class="firefox|Google-chrome"]                                                           → 3
+assign [class="firefox|Google-chrome|google-chrome"]                                                           → 3
 
 # Workspace 4 freetube
 #assign [class="freetube"]                                                               → 4
@@ -412,10 +350,10 @@ assign [class="firefox|Google-chrome"]                                          
 #assign [class="Meld"]                                                               → 5
 
 # Workspace 6 all video related software
-assign [class="Vlc|vlc|discord"]                                                            → 6
+assign [class="discord"]                                                            → 6
 
 # Workspace 7 virtual machines and settings
-assign [class="Telegram|Discord"]                           → 7
+assign [class="Telegram"]                           → 7
 
 # Workspace 8 file managers
 #assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
@@ -473,11 +411,14 @@ exec_always --no-startup-id numlockx on
 # variety 
 exec --no-startup-id variety
 
+#exec variety --set ~/walls/ananazz-true.jpg
+#exec variety --set ~/walls/pathologic-tragics.jpg
+
 # clipman
 #exec --no-startup-id xfce4-clipman
 
 # feh обои рабочего стола
-#exec --no-startup-id feh --bg-fill ~/walls/manjaro.png &
+#exec --no-startup-id feh --bg-fill ~/walls/ananazz-true.jpg &
 
 # Polybar панель
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
@@ -492,53 +433,73 @@ exec --no-startup-id xfce4-power-manager &
 #exec --no-startup-id xfsettingsd &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
-#workspace related
+#####################################################################################################################
+#################                          Запуск программ - сочитания клавиш                       #################
+#####################################################################################################################
 
-#workspace 1 related
-bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
-#qwerty/azerty conflict with w
-bindsym $mod+w exec --no-startup-id exo-open --launch webbrowser;focus
+
+# Старт программ
+
+# sublime_text
+bindsym $mod+shift+Return exec .appz/sublime_text/sublime_text;Workspace 2
+#bindsym $mod+shift+Return exec /opt/sublime_text/sublime_text # for arch
+#bindsym $mod+shift+Return exec flatpak run com.sublimetext.three # flatpak
+
+# vs code
+bindsym $mod+shift+v exec code
+
+# android studio
+bindsym $mod+shift+a exec sh ~/android-studio-2020.3.1.24-linux/android-studio/bin/studio.sh
+
+# blanket
+bindsym $mod+b exec flatpak run com.rafaelmardojai.Blanket;Workspace 9
+
+# gcolor
+bindsym $mod+g exec gcolor3;
+
+# nautilus
+bindsym $mod+e exec thunar
+
+# noisetorch
+bindsym $mod+n exec ~/.local/bin/noisetorch 
+
+# discord
+bindsym $mod+shift+d exec discord
+
+# firefox
 bindsym $mod+shift+f exec --no-startup-id firefox
-bindsym control+mod1+v exec --no-startup-id vivaldi-stable;focus
-#bindsym control+mod1+c exec --no-startup-id chromium;focus
 
-#workspace 2 related
-#bindsym $mod+F2 exec --no-startup-id geany;focus
+# google-chrome
+bindsym $mod+shift+b exec google-chrome-stable
+# freetube
+#bindsym $mod+y exec freetube 
 
-#workspace 3 related
-bindsym $mod+F3 exec --no-startup-id inkscape;focus
+# gitkraken
+bindsym control+mod1+g exec flatpak run com.axosoft.GitKraken
 
-#workspace 4 related
-bindsym $mod+shift+y exec --no-startup-id freetube;focus
+# soundux
+bindsym $mod+shift+s exec flatpak run io.github.Soundux
 
-#workspace 5 related
-bindsym $mod+F5 exec --no-startup-id meld;focus
-bindsym control+mod1+i exec --no-startup-id nitrogen;focus
-
-#workspace 6 related
-bindsym $mod+F6 exec --no-startup-id vlc;focus
-
-#workspace 7 related
-bindsym $mod+F7 exec --no-startup-id virtualbox;focus
-
-#workspace 8 related
-for_window [class="Thunar"] focus
-bindsym $mod+F8 exec --no-startup-id thunar;focus
-#bindsym $mod+Shift+t exec --no-startup-id thunar;focus
-bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-bindsym control+mod1+b exec --no-startup-id thunar;focus
-
-#workspace 9 related
-bindsym $mod+F9 exec --no-startup-id evolution;focus
-#bindsym $mod+F9 exec --no-startup-id geary;focus
-#bindsym control+mod1+e exec --no-startup-id geary;focus
-
-#workspace 10 related
-bindsym $mod+F10 exec --no-startup-id spotify;focus
-bindsym control+mod1+s exec --no-startup-id spotify;focus
+# terminal
+bindsym $mod+Return exec kitty -o background_opacity=0.8;focus
+#bindsym $mod+Return exec kitty;focus
 
 
+# telegram 
+bindsym $mod+t exec --no-startup-id telegram-desktop
 
+# teams
+bindsym $mod+shift+t exec flatpak run com.github.IsmaelMartinez.teams_for_linux
+
+
+#System monitor
+bindsym control+Shift+Escape exec --no-startup-id gnome-system-monitor;focus
+
+#catfish
+bindsym control+mod1+c exec --no-startup-id catfish;focus
+
+#xkill
+bindsym --release $mod+Escape exec xkill
 
 #####################################################################################################################
 #################                           скриншоты                                               #################
@@ -599,6 +560,10 @@ for_window [window_role="^Preferences$"] floating enable
 for_window [window_role="setup"] floating enable
 
 
+
+
+
+
 #####################################################################################################################
 #################                          give focus to applications                               #################
 #####################################################################################################################
@@ -635,6 +600,17 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
+
+
+#####################################################################################################################
+#################                          bar toggle                                               #################
+#####################################################################################################################
+
+
+# bar toggle, hide or show
+#bindsym $mod+b bar mode toggle
+
+
 #####################################################################################################################
 #################                         Контроль обводки                                          #################
 #####################################################################################################################
@@ -646,7 +622,7 @@ hide_edge_borders both
 
 #changing border style
 #super+t in arcolinux is starting terminal
-bindsym $mod+Mod1+t border normal
+#bindsym $mod+t border normal
 #bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
@@ -669,6 +645,9 @@ new_float normal
 #Popups during fullscreen mode
 popup_during_fullscreen smart
 
+
+
+
 #####################################################################################################################
 #################                          i3 gaps next                                             #################
 #####################################################################################################################
@@ -679,16 +658,15 @@ popup_during_fullscreen smart
 # want it
 
 
-##### i3-gaps ##############
-for_window [class=".*"] border pixel 0
-gaps inner 10
+for_window [class="^.*"] border pixel 0
+gaps inner 8
 gaps outer 1
-#gaps horizontal 2
+#smart_gaps on
+#smart_borders on
 
-################# i3-radius #######################
-smart_borders on
-smart_borders no_gaps
-#border_radius 20px
+
+
+
 
 #####################################################################################################################
 #################                          i3 gaps change                                           #################
@@ -741,10 +719,10 @@ mode "$mode_gaps_outer" {
 #####################################################################################################################
 
 #if you want transparency on non-focused windows, ...
-exec_always --no-startup-id picom
-#exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+#exec_always --no-startup-id picom
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
-#bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
+bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
 
 #####################################################################################################################
 #####################################################################################################################
@@ -853,3 +831,4 @@ exec_always --no-startup-id picom
 #####################################################################################################################
 #####################################################################################################################
 #####################################################################################################################
+
