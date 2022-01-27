@@ -140,7 +140,7 @@ font-6 = "unicode-emoji:size=10;0"
 
 modules-left =   i3 sep xwindow
 modules-center = youtube vk github weblancer figma miro steam
-modules-right =  cpu2 memory3 volume5 isvpn updates-pacman date xkeyboard2 uptime variety trash wireless-network powermenu
+modules-right =  cpu2 memory3 volume5 is-vpn updates-pacman date xkeyboard2 uptime variety trash wireless-network powermenu
 
 separator = 
 
@@ -1116,34 +1116,16 @@ label = %output%
 format-background = 
 format-foreground = 
 
-[module/isvpn]
-type = custom/script
-exec = ~/.config/polybar/scripts/isvpn.sh
-interval = 1
-
-click-middle = ~/.config/polybar/scripts/isvpn.sh toggle &
-click-left = windscribe connect
-click-right = windscribe disconnect
-
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-
-label = %output%
-format-background = 
-format-foreground = 
-
 [module/is-vpn]
 type = custom/script
 exec = ~/.config/polybar/scripts/is-vpn.sh
-interval = 1
-
+interval = 2
 click-middle = ~/.config/polybar/scripts/is-vpn.sh toggle &
 click-left = windscribe connect
 click-right = windscribe disconnect
-
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-
+format-prefix = "  "
+;  
+format-prefix-foreground = #256974
 label = %output%
 format-background = 
 format-foreground = 
